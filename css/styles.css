@@ -15,6 +15,9 @@ summary, hgroup {
   border: 0;
 }
 
+p{
+    text-align: left;
+}
 a:active,
 a:hover {
   outline: 0;

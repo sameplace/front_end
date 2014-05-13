@@ -61,15 +61,17 @@
     <div id="section4_p">
     <div class="container">
       <h1>Section 4</h1>   
-      <p>
+      
         <div id="email_input" class="input-group input-group-lg">
           <input type="text" class="form-control" placeholder="e-mail address">
         </div>
-        <textarea class="form-control" rows="7" placeholder="Text"></textarea>
-        <button id="send_mail" style="width:100%" type="button" class="btn btn-default btn-lg">
+        <textarea id="email_input" class="form-control" rows="7" placeholder="Text"></textarea>
+        <button id="send_mail" type="button" class="btn btn-default btn-lg">
           <span class="glyphicon glyphicon-envelope"></span> Send
         </button>
+        <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, vestibulum at fermentum vitae, iaculis sit amet elit.</p>
+      <div id="message"></div>
       </div>
     </div>
     </section>
@@ -81,5 +83,8 @@
     <script src="js/fixed-responsive-nav.js"></script>
     <script src="js/anim.js"></script>
 
+    <script>
+    var test = document.getElementById('send_mail');
+    AjaxOnClick('aaaa', 'libs/test.php', test);</script>
   </body>
 </html>
