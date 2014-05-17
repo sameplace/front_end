@@ -187,4 +187,5 @@
       }
     }
 
-    var element = document.getElementById('home_p').className = 'slideUp';
+    var element = document.getElementById('home_l').className = 'slideRight';
+    var element = document.getElementById('home_r').className = 'slideLeft';
