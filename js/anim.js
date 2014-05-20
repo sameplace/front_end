@@ -37,7 +37,7 @@ var CallAjax = function(parameter, file){
 	xmlhttp.send(pars);
 	xmlhttp.onreadystatechange=function()
 	{
-		if (xmlhttp.readyState==4)aa
+		if (xmlhttp.readyState==4)
 		{
 			var json = xmlhttp.responseText;
     		var test = document.getElementById('message');

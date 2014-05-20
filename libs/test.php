@@ -1,5 +1,5 @@
 <?php
 
-	echo "Bruce Wayne coming from php file!";
+	echo "Bruce Wayne jumps out from php file! ";
 
 ?>
