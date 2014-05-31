@@ -394,13 +394,38 @@ footer a.by{
   INPUTS
 --------------------------------------------- */
 
-#email_input{
+#input_100{
   width:100%;
+}
+
+#input_70{
+  width: 70%;
 }
 
 #send_mail{
   width:100%;
   margin-bottom: 20px;
 }
+
+/* PROFILE INPUTS AND MISC */
+
+#profile_input{
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#confirm_profile{
+  width:30%;
+  float: right;
+  margin-top: 10px;
+}
+
+#profile_misc{
+  float: left;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+
 
 
