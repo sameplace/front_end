@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="plunker">
   <head>
     <meta charset="utf-8">
     <title>Test</title>
@@ -10,8 +10,13 @@
 
     <script src="js/responsive-nav.js"></script>
     <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/angular-ui-bootstrap.js" type="text/javascript"></script>
     <script src="js/model/mainApp.js" type="text/javascript"></script>
     <script src="js/controller/mainController.js" type="text/javascript"></script>
+    <script src="js/controller/tabsController.js" type="text/javascript"></script>
+
+
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script
 
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
   </head>
@@ -92,8 +97,24 @@
     <section id="section2">
     <div class="container">
       <h1>Section 2</h1>
-      <p id="section2_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
-      </p>
+      <div id="section2_p">
+         
+      <div id="tab_above"><img width="150" src="images/blue.jpg" />Sue Smith<a href=""><div id="tab_available">Available now! Click to contact</div></a></div>
+      <div ng-controller="TabsDemoCtrl" id="tab_container">
+      <div id="tab_button_container">
+          <button class="btn btn-default btn-sm" ng-click="tabs[0].active = true" id="tab_button">Documents</button><br />
+          <button class="btn btn-default btn-sm" ng-click="tabs[1].active = true" id="tab_button">People</button><br />
+          <button class="btn btn-default btn-sm" ng-click="tabs[2].active = true" id="tab_button">Email</button>
+      </div>
+      <div id="tab_content">
+        <tabset justified="true">
+          <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+            {{tab.content}}
+          </tab>
+        </tabset>
+        </div>
+      </div> 
+      </div>
     </div>
     </section>
 

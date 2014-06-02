@@ -361,7 +361,7 @@ footer a.by{
   background-image: url('../images/blue.jpg');
   background-size:100% 100%;
   color:#fff;
-  padding-top: 120px; /* very important, change it together with header haight */
+  padding-top: 120px; /* very important, change it together with header height */
 }
 
 #home_left{
@@ -426,6 +426,58 @@ footer a.by{
   margin-top: 3px;
 }
 
+/* ------------------------------------------
+  TABS
+--------------------------------------------- */
+#vertical_tab{
+  width: 200px;
+}
+#tab_container{
+   margin-left:auto; 
+   margin-right:auto; 
+   width:70%; 
+   height: 500px;
+}
+#tab_content{
+   background-color: #fff;
+   float: left;
+   width: 70%;
+   height: 400px;
+   padding: 20px;
 
-
+}
+#tab_button{
+  width: 140px;
+  height: 60px;
+  background-color: #A9D0F5;
+  margin-top:20px;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: #fff;
+}
+#tab_button_container{
+  float: left;
+  width: 140px;
+}
+#tab_above{
+  width: 60%;
+  background-color: #fff;
+  height: 150px;
+  margin-left:auto; 
+  margin-right:auto; 
+  margin-bottom: 5px;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: left;
+}
+#tab_available{
+  background-color: #3ADF00;
+  float: right;
+  width: 150px;
+  height: 120px;
+  text-align: center;
+  font-size: 23px;
+  padding: 5px;
+}
 
