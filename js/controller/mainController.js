@@ -14,4 +14,15 @@ function mainController($scope, $http) {
 				$scope.message_box = json;
 			});
 		};
+
+		$scope.formSubmitData = {};
+		$scope.processSubmit = function() {
+			$scope.formSubmitData.email = $scope.email;
+			$scope.formSubmitData.password = $scope.password;
+
+			$http.post('libs/test.php', $scope.formSubmitData)
+			.success(function(json) {
+				$scope.message_submit = json;
+			});
+		};
 }

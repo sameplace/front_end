@@ -130,14 +130,14 @@ p {
 --------------------------------------------- */
 
 header {
-  background: #FFF;
+  background: #fff;
   position: fixed;
   z-index: 3;
   width: 100%;
   left: 0;
   top: 0;
   border-bottom: 7px solid black;
-  padding: 30px;
+  padding: 10px;
 }
 
 .logo {
@@ -149,6 +149,15 @@ header {
   color: #000;
   float: right;
   font-size: 24px;
+}
+
+#login {
+  float: right;
+  width: 250px;
+}
+
+#submit_button_login {
+  float: right;
 }
 
 
@@ -358,10 +367,10 @@ footer a.by{
 --------------------------------------------- */
 
 #home{
-  background-image: url('../images/blue.jpg');
+  background-image: url('../images/picc.it_.jpg');
   background-size:100% 100%;
-  color:#fff;
-  padding-top: 120px; /* very important, change it together with header height */
+  color:#424242;
+  padding-top: 170px; /* very important, change it together with header height */
 }
 
 #home_left{
@@ -477,7 +486,7 @@ footer a.by{
   width: 150px;
   height: 120px;
   text-align: center;
-  font-size: 23px;
+  font-size: 22px;
   padding: 5px;
 }
 
