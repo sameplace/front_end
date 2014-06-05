@@ -373,6 +373,13 @@ footer a.by{
   padding-top: 170px; /* very important, change it together with header height */
 }
 
+#service{
+  background-image: url('../images/html5.jpg');
+  background-size:100% 100%;
+  color:#424242;
+  padding-top: 170px; /* very important, change it together with header height */
+}
+
 #home_left{
   width: 50%;
   float: left;
@@ -435,6 +442,12 @@ footer a.by{
   margin-top: 3px;
 }
 
+#profile_container{
+  width:50%; 
+  margin-left:auto; 
+  margin-right:auto;
+}
+
 /* ------------------------------------------
   TABS
 --------------------------------------------- */
@@ -444,16 +457,16 @@ footer a.by{
 #tab_container{
    margin-left:auto; 
    margin-right:auto; 
-   width:70%; 
+   width:80%; 
    height: 500px;
 }
 #tab_content{
    background-color: #fff;
    float: left;
-   width: 70%;
-   height: 400px;
+   width: 80%;
+   height: 500px;
    padding: 20px;
-
+   border: solid 2px #E6E6E6;
 }
 #tab_button{
   width: 140px;
@@ -470,21 +483,21 @@ footer a.by{
   width: 140px;
 }
 #tab_above{
-  width: 60%;
-  background-color: #fff;
+  width: 80%;
+  background-color: #FFF;
   height: 150px;
   margin-left:auto; 
   margin-right:auto; 
   margin-bottom: 5px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
   text-align: left;
+  border: solid 2px #E6E6E6;
 }
 #tab_available{
-  background-color: #3ADF00;
   float: right;
-  width: 150px;
-  height: 120px;
+  width: 170px;
+  height: 90px;
   text-align: center;
   font-size: 22px;
   padding: 5px;

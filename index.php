@@ -1,55 +1,7 @@
-<!DOCTYPE html>
-<html ng-app="plunker">
-  <head>
-    <meta charset="utf-8">
-    <title>Test</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animation.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
 
-    <script src="js/responsive-nav.js"></script>
-    <script src="js/angular.min.js" type="text/javascript"></script>
-    <script src="js/angular-ui-bootstrap.js" type="text/javascript"></script>
-    <script src="js/model/mainApp.js" type="text/javascript"></script>
-    <script src="js/controller/mainController.js" type="text/javascript"></script>
-    <script src="js/controller/tabsController.js" type="text/javascript"></script>
+  <?php include "libs/head.php"; ?>
 
-
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script
-
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-  </head>
-
-<!-- applied module and controller -->
-  <body ng-app="mainApp" ng-controller="mainController">
-
-<!-- HEADER START -->
-    <header>
-      <nav class="nav-collapse">
-        <ul>
-          <li class="active"><a href="#home" data-scroll>Home</a></li>
-          <li><a href="#section1" data-scroll>Profile Page</a></li>
-          <li><a href="#section2" data-scroll>Section 2</a></li>
-          <li><a href="#section3" data-scroll>Section 3</a></li>
-          <li><a href="#section4" data-scroll>Section 4</a></li>
-        </ul>
-      </nav>
-      <div id="login">
-        <form ng-submit="processSubmit()">
-          <div class="form-group">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="password">
-          </div>
-         <button type="submit" id="submit_button_login" class="btn btn-default">Submit</button>
-        </form>
-      </div>
-      <a href="#home" class="logo" data-scroll>Navigation Bar / Header</a>
-    <div id="message">{{message_submit}}</div>
-
-    </header>
+  <?php include "libs/header.php"; ?>
 
 <!-- HOME START -->
     <section id="home">
@@ -71,38 +23,11 @@
     <section id="section1">
     <div class="container">
       <div id="section1_p">
-      <h1>Profile Page</h1>
+      <h1>Section 1</h1>
       <!-- Profile page -->
-      <div style="width:50%; margin-left:auto; margin-right:auto;">
-       <form ng-submit="processForm()">
-        <div id="input_100" class="input-group input-group-lg">
-                <span id="profile_misc">Username:</span> 
-                <input type="text" class="form-control" placeholder="username" id="username" ng-model="username">
-              </div>
-              <div id="input_100" class="input-group input-group-lg">
-                <span id="profile_misc">Real Name:</span> 
-                <input type="text" class="form-control" placeholder="realname" id="realname" ng-model="realname">
-              </div>
-              <div id="input_100" class="input-group input-group-lg">
-                <span id="profile_misc">Email:</span> 
-                <input type="text" class="form-control" placeholder="email" id="email" ng-model="email">
-              </div>
-              <div id="input_100" class="input-group input-group-lg">
-                <span id="profile_misc">Question:</span> 
-                <input type="text" class="form-control" placeholder="question" id="question" ng-model="question">
-              </div>
-              <div id="input_100" class="input-group input-group-lg">
-                <span id="profile_misc">Answer:</span> 
-                <input type="text" class="form-control" placeholder="answer" id="answer" ng-model="answer">
-              </div>
-              <button id="confirm_profile" type="submit" class="btn btn-default btn-lg">
-                 Change
-              </button>
-        </form>            
-        </div>        
+          
       </div>      
     </div>
-              <div id="message">{{message_box}}</div>
 
     </section>
 
@@ -112,21 +37,7 @@
       <h1>Section 2</h1>
       <div id="section2_p">
          
-      <div id="tab_above"><img width="150" src="images/blue.jpg" />Sue Smith<a href=""><div id="tab_available">Available now! Click to contact</div></a></div>
-      <div ng-controller="TabsDemoCtrl" id="tab_container">
-      <div id="tab_button_container">
-          <button class="btn btn-default btn-sm" ng-click="tabs[0].active = true" id="tab_button">Documents</button><br />
-          <button class="btn btn-default btn-sm" ng-click="tabs[1].active = true" id="tab_button">People</button><br />
-          <button class="btn btn-default btn-sm" ng-click="tabs[2].active = true" id="tab_button">Email</button>
-      </div>
-      <div id="tab_content">
-        <tabset justified="true">
-          <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
-            {{tab.content}}
-          </tab>
-        </tabset>
-        </div>
-      </div> 
+     
       </div>
     </div>
     </section>
@@ -165,13 +76,4 @@
     </section>
 
 <!-- FOOTER START -->
-    <footer>
-    All rights reserved <br />
-    <a href="#home" data-scroll>Back up</a>
-    </footer>
-
-    <script src="js/fastclick.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/fixed-responsive-nav.js"></script>
-  </body>
-</html>
+  <?php include "libs/footer.php"; ?>
