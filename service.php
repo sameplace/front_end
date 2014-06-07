@@ -4,9 +4,8 @@
   <?php include "libs/header.php"; ?>
 
 <!-- HOME START -->
-    <section id="home">
+    <section id="service">
     <div class="container">
-        <h1 class="expandOpen">Service Page</h1>
       <div id="home_l">
       <div id="home_left">
       <div id="profile_container">

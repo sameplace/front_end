@@ -370,14 +370,14 @@ footer a.by{
   background-image: url('../images/picc.it_.jpg');
   background-size:100% 100%;
   color:#424242;
-  padding-top: 170px; /* very important, change it together with header height */
+  margin-top: 150px; /* very important, change it together with header height */
 }
 
 #service{
   background-image: url('../images/html5.jpg');
   background-size:100% 100%;
-  color:#424242;
-  padding-top: 170px; /* very important, change it together with header height */
+  color:#fff;
+  margin-top: 150px; /* very important, change it together with header height */
 }
 
 #home_left{
