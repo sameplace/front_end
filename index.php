@@ -8,11 +8,26 @@
     <div class="container">
         <h1 class="expandOpen">Template HTML5</h1>
       <div id="home_left">
-          <p id="home_l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
+          <p id="home_l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
+          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac
+           vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. 
+           Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. 
+           Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, 
+           vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi.
+            Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
+            Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin 
+            leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
           </p>
       </div>
       <div id="home_right">
-          <p id="home_r">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
+          <p id="home_r">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
+          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
+          Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. 
+          Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. Suspendisse id est blandit, volutpat turpis a, dictum dolor. 
+          Praesent aliquet sapien non luctus varius. Integer lacus neque, vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse 
+          ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo 
+          ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
           </p>
       </div>
     </div>
@@ -22,10 +37,20 @@
 <!-- Profile Page START -->
     <section id="section1">
     <div class="container">
-      <div id="section1_p">
       <h1>Section 1</h1>
+      <div id="section1_p">
       <!-- Profile page -->
-          
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
+          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac
+           vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. 
+           Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. 
+           Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, 
+           vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi.
+            Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
+            Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin 
+            leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
+          </p>
       </div>      
     </div>
 
@@ -36,8 +61,15 @@
     <div class="container">
       <h1>Section 2</h1>
       <div id="section2_p">
-         
-     
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
+          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac
+           vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. 
+           Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. 
+           Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, 
+           vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi.
+            Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
+            Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin 
+            leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. 
       </div>
     </div>
     </section>

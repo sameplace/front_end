@@ -478,6 +478,9 @@ footer a.by{
   border-top-right-radius: 0;
   color: #fff;
 }
+#tab_button_container button:focus{
+  background-color: #FAAC58;
+}
 #tab_button_container{
   float: left;
   width: 140px;
