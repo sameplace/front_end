@@ -469,6 +469,25 @@ footer a.by{
    padding: 20px;
    border: solid 2px #E6E6E6;
 }
+/* TAB CONTENT TABLES */
+#tab_content th {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  background-color: #FAAC58;
+}
+
+#tab_content td {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+#tab_content table {
+  border: 1px solid #fc6;
+  background-color: #ffd;
+  border-collapse: separate; 
+  border-spacing: 5px;
+}
+
 #tab_button{
   width: 140px;
   height: 60px;

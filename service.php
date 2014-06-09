@@ -63,8 +63,8 @@
               </div>
 
               <!-- TAB CONTENT -->             
-                <div id="tab_content">
-                    {{tab}}
+                <div id="tab_content" ng-include="tab">
+                
                 </div>
            </div> 
 
