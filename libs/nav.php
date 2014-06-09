@@ -2,7 +2,7 @@
 
 	$file = $_SERVER['REQUEST_URI'];
 
-	if($file=="/index.php"){
+	if($file=="/index.php" || $file=="/"){
 		$home = "home";
 		$section1 = "Section 1";
 		$section2 = "Section 2";

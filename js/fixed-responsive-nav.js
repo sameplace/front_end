@@ -187,5 +187,14 @@
       }
     }
 
-    var element = document.getElementById('home_l').className = 'slideRight';
-    var element = document.getElementById('home_r').className = 'slideLeft';
+  var MoveClass = function(class_name, animation){
+
+    var classCheck = document.getElementById(class_name);
+
+    if (typeof classCheck != 'undefined' && classCheck !== null) {
+      var element = document.getElementById(class_name).className = animation;
+    }
+  }
+
+  MoveClass('home_l', 'slideRight');
+  MoveClass('home_r', 'slideLeft');

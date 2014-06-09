@@ -1,5 +1,6 @@
 function mainController($scope, $http) {
 
+	//function processForm takes text inputs from profile area, and send all information to php file, for now it responds in message_box div
 	$scope.formData = {};
 		$scope.processForm = function() {
 			$scope.formData.username = $scope.username;
@@ -14,6 +15,7 @@ function mainController($scope, $http) {
 			});
 		};
 
+		//function processSubmit takes text inputs from login, and send all information to php file, for now it responds in message_submit div
 		$scope.formSubmitData = {};
 		$scope.processSubmit = function() {
 			$scope.formSubmitData.email = $scope.email;
@@ -25,6 +27,13 @@ function mainController($scope, $http) {
 
 			});
 		};
+
+	//function ChangeColor changes the color of active tab, and stays that way until another tab is clicked.
+		$scope.ChangeColor = function(nr) {
+			$scope.tabs = [];
+			$scope.tabs[nr] = '#FAAC58';
+
+		}
 
 	//content for tabs (on click)
 		$scope.documentsTab = "If showing Documents, then this is a table of documents, where each row shows a document, and columns show things like type, date, size, etc. Clicking on a document shows it in this space. The document view can be dismissed to return to the table.";

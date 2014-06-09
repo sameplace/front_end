@@ -8,6 +8,8 @@
     <div class="container">
       <div id="home_l">
       <div id="home_left">
+
+      <!-- Profile page -->
       <div id="profile_container">
         <form ng-submit="processForm()">
           <div id="input_100" class="input-group input-group-lg">
@@ -36,7 +38,6 @@
               </div><br clear="all">
            </div>
               <div id="message">{{message_box}}</div>
-
         </form>            
       </div>
       </div>
@@ -48,23 +49,27 @@
     <section id="section1">
     <div class="container">
       <div id="section1_p">
-      <!-- Profile page -->
-      <div id="tab_above"><img width="130" src="images/fm.jpeg" />Sue Smith<a href="">
-      <div id="tab_available" class="label label-success">Available now <br /><br />Click to contact</div></a></div>
-          <div id="tab_container">
-            <div id="tab_button_container">
-                <button class="btn btn-default btn-sm" ng-click="tab = documentsTab" id="tab_button">Documents</button><br />
-                <button class="btn btn-default btn-sm" ng-click="tab = peopleTab" id="tab_button">People</button><br />
-                <button class="btn btn-default btn-sm" ng-click="tab = emailTab" id="tab_button">Email</button>
-            </div>
-            <div id="tab_content">
-                {{tab}}
-            </div>
-          </div> 
-      </div>      
-    </div>
-              <div id="message">{{message_box}}</div>
 
+        <div id="tab_above">
+          <img width="130" src="images/fm.jpeg" />Sue Smith<a href="">
+          <div id="tab_available" class="label label-success">Available now <br /><br />Click to contact</div></a></div>
+
+            <!-- TABS -->
+            <div id="tab_container">
+              <div id="tab_button_container">
+                  <button class="btn btn-default btn-sm" ng-click="tab = documentsTab; ChangeColor(0);" id="tab_button" style="background-color:{{tabs[0]}};">Documents</button><br />
+                  <button class="btn btn-default btn-sm" ng-click="tab = peopleTab; ChangeColor(1);" id="tab_button" style="background-color:{{tabs[1]}};">People</button><br />
+                  <button class="btn btn-default btn-sm" ng-click="tab = emailTab; ChangeColor(2);" id="tab_button" style="background-color:{{tabs[2]}};">Email</button>
+              </div>
+
+              <!-- TAB CONTENT -->             
+                <div id="tab_content">
+                    {{tab}}
+                </div>
+           </div> 
+
+        </div>      
+        </div>
     </section>
 
 <!-- SECTION 2 START -->

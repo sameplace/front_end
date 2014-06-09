@@ -5,7 +5,7 @@ window.smoothScroll = (function (window, document, undefined) {
   // Default settings
   // Private {object} variable
   var _defaults = {
-    speed: 500,
+    speed: 1200,
     easing: 'easeInOutCubic',
     updateURL: false,
     callbackBefore: function () {},
@@ -107,7 +107,7 @@ window.smoothScroll = (function (window, document, undefined) {
     var updateURL = overrides.updateURL || options.updateURL;
 
     // Selectors and variables
-    var headerHeight = 55;
+    var headerHeight = 110;
     var startLocation = window.pageYOffset; // Current location on the page
     var endLocation = _getEndLocation( document.querySelector(anchor), headerHeight ); // Scroll to location
     var animationInterval; // interval timer
