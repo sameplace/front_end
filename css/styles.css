@@ -131,7 +131,7 @@ p {
 --------------------------------------------- */
 
 header {
-  background: #000;
+  background: #1C1C1C;
   position: fixed;
   z-index: 3;
   width: 100%;
@@ -557,5 +557,9 @@ footer a.by{
   text-align: center;
   font-size: 22px;
   padding: 5px;
+}
+
+#message{
+  color: #fff;
 }
 

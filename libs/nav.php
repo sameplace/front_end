@@ -4,15 +4,15 @@
 
 	if($file=="/index.php" || $file=="/"){
 		$home = "home";
-		$section1 = "o";
-		$section2 = "o";
+		$section1 = "";
+		$section2 = "";
 		$section3 = "<a href='#section3' data-scroll></a>";
 		$section4 = "<a href='#section4' data-scroll></a>";
 	}
 	else{
 		$home = "service";
-		$section1 = "Buyer View";
-		$section2 = "Section 2";
+		$section1 = "";
+		$section2 = "";
 		$section3 = "";
 		$section4 = "";
 	}

@@ -6,6 +6,7 @@
           <li><a href="company.php" data-scroll>Company</a></li>        
           <li><a href="news.php" data-scroll>News</a></li>        
           <li><a href="contact.php" data-scroll>Contact</a></li>      
+          <li><a href="service.php" data-scroll>Service</a></li>      
           <li>
               <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email">
            </li>
