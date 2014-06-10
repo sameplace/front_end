@@ -3,6 +3,9 @@
 
   <?php include "libs/header.php"; ?>
 
+  <?php include "libs/nav.php"; ?>
+
+
 <!-- HOME START -->
     <section id="home">
     <div class="container">

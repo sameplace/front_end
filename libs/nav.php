@@ -4,10 +4,10 @@
 
 	if($file=="/index.php" || $file=="/"){
 		$home = "home";
-		$section1 = "Section 1";
-		$section2 = "Section 2";
-		$section3 = "<li><a href='#section3' data-scroll>Section 3</a></li>";
-		$section4 = "<li><a href='#section4' data-scroll>Section 4</a></li>";
+		$section1 = "o";
+		$section2 = "o";
+		$section3 = "<a href='#section3' data-scroll></a>";
+		$section4 = "<a href='#section4' data-scroll></a>";
 	}
 	else{
 		$home = "service";
@@ -18,12 +18,12 @@
 	}
 
 ?>
-<nav class="nav-collapse">
-        <ul>
-          <li class="active"><a href="#<?php echo $home; ?>" data-scroll><?php echo $home; ?></a></li>
-          <li><a href="#section1" data-scroll><?php echo $section1; ?></a></li>
-          <li><a href="#section2" data-scroll><?php echo $section2; ?></a></li>
-          <?php echo $section3; ?>
-          <?php echo $section4; ?>          
-        </ul>
-      </nav>
+<div class="nav-collapse">
+<ul>
+        <li class="active"><a href="#<?php echo $home; ?>" data-scroll></a></li>
+        <li><a href="#section1" data-scroll></a></li>
+        <li><a href="#section2" data-scroll></a></li>
+        <li><?php echo $section3; ?></li>
+        <li><?php echo $section4; ?></li>
+</ul>    
+</div>

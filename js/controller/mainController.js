@@ -37,7 +37,7 @@ function mainController($scope, $http) {
 		}
 
 	//content for tabs (on click)
-		var path = "../templates/";
+		var path = "templates/";
 
 		$scope.documentsTab = path + "documents.tpl";
 		$scope.peopleTab = path + "people.tpl";
