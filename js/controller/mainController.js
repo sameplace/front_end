@@ -15,6 +15,19 @@ function mainController($scope, $http) {
 			});
 		};
 
+		$scope.processRegistration = function() {
+			$scope.formData.username = $scope.username;
+			$scope.formData.email = $scope.email;
+			$scope.formData.password = $scope.password;
+			$scope.formData.password_repeat = $scope.password_repeat;
+
+
+			$http.post('libs/test.php', $scope.formData)
+			.success(function(json) {
+				$scope.message_box = json;
+			});
+		};
+
 		//function processSubmit takes text inputs from login, and send all information to php file, for now it responds in message_submit div
 		$scope.formSubmitData = {};
 		$scope.processSubmit = function() {

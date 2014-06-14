@@ -1,11 +1,3 @@
-
-  <?php include "libs/head.php"; ?>
-
-  <?php include "libs/header.php"; ?>
-
-  <?php include "libs/nav.php"; ?>
-  
-
 <!-- HOME START -->
     <section id="service">
     <div class="container">
@@ -85,6 +77,3 @@
       </div>
     </div>
     </section>
-
-<!-- FOOTER START -->
-  <?php include "libs/footer.php"; ?>

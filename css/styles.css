@@ -152,8 +152,7 @@ header {
 }
 
 #login {
-  float: left;
-  width: 250px;
+  float: right;
 }
 
 #submit_button_login {
@@ -171,7 +170,7 @@ header {
 .header_link ul {
   list-style: none;
   width: 100%;
-  float: right;
+  float: left;
 }
 
 @media screen and (min-width: 40em) {
@@ -231,6 +230,61 @@ header {
   }
 }
 
+/* INPUTS IN HEADER */
+.header_link_inputs,
+.header_link_inputs ul {
+  list-style: none;
+  width: 100%;
+  float: right;
+}
+
+@media screen and (min-width: 40em) {
+  .header_link_inputs {
+    width: auto;
+  }
+}
+
+.header_link_inputs li {
+  float: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .header_link_inputs li {
+    width: auto;
+  }
+}
+
+.header_link_inputs a:hover {
+  color: #848484;
+  text-decoration: none;
+}
+
+.header_link_inputs input {
+  margin-top: 5px;
+  margin-right: 4px;
+  width: 150px;
+}
+
+.header_link_inputs button {
+  margin-top: 5px;
+}
+
+.register_link{
+  float: right;
+  margin-top: -3px;
+  margin-right: 4px;
+}
+
+.register_link a {
+  color: #fff;
+}
+
+.register_link a:hover {
+  color: #848484;
+  text-decoration: none;
+}
+
 .nav-collapse,
 .nav-collapse * {
   -webkit-box-sizing: border-box;
@@ -247,17 +301,15 @@ header {
 }
 
 .nav-collapse a {
-  background: #FFF;
   border-radius: 50%;
   height: 15px;
   width: 15px;
   display: block;
   text-align: center;
   vertical-align: middle;
-  border: black solid 1px;
+  border: black solid 2px;
 }
 
-.nav-collapse a:active,
 .nav-collapse .active a {
   background: #000;
 }

@@ -2,7 +2,7 @@
 <html ng-app="plunker">
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Sameplace</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animation.css">
