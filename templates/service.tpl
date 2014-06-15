@@ -43,7 +43,6 @@
 <!-- Profile Page START -->
     <section id="section1">
     <div class="container">
-      <div id="section1_p">
 
         <div id="tab_above">
           <img width="130" src="images/fm.jpeg" />Sue Smith<a href="">
@@ -63,7 +62,6 @@
                 </div>
            </div> 
 
-        </div>      
         </div>
     </section>
 

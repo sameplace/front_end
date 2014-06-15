@@ -15,7 +15,6 @@
     <script src="js/controller/mainController.js" type="text/javascript"></script>
     <script src="js/controller/tabsController.js" type="text/javascript"></script>
 
-
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script
 
     <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>

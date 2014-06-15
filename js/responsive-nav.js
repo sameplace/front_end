@@ -482,7 +482,7 @@
 
     };
 
-    return new ResponsiveNav(el, options);
+    // return new ResponsiveNav(el, options);
 
   };
 

@@ -156,7 +156,7 @@ header {
 }
 
 #submit_button_login {
-  float: right;
+  float: left;
 }
 
 .header_link,
@@ -229,45 +229,107 @@ header {
     margin: 0;
   }
 }
-
-/* INPUTS IN HEADER */
-.header_link_inputs,
-.header_link_inputs ul {
-  list-style: none;
-  width: 100%;
+/* INPUTS FOR LOGIN */
+.header_inputs {
+  width: 350px;
+  height: 50px;
   float: right;
+  padding: 5px;
 }
-
-@media screen and (min-width: 40em) {
-  .header_link_inputs {
-    width: auto;
-  }
-}
-
-.header_link_inputs li {
+.header_inputs input {
+  width: 130px;
   float: left;
-  width: 100%;
+  margin-right: 3px;
 }
-
-@media screen and (min-width: 40em) {
-  .header_link_inputs li {
-    width: auto;
-  }
-}
-
-.header_link_inputs a:hover {
+.header_inputs a:hover {
   color: #848484;
   text-decoration: none;
 }
+.header_inputs a {
+    padding: 5px;
+    padding-right: 10px;
+    float: right;
+    color: #fff;
+  }
 
-.header_link_inputs input {
-  margin-top: 5px;
-  margin-right: 4px;
-  width: 150px;
-}
+/* HEADER LINK RESPONSIVE VERSION */
+@media screen and (max-width: 750px) {
 
-.header_link_inputs button {
-  margin-top: 5px;
+    .header_inputs {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 245px;
+    }
+
+    .header_inputs input {
+      margin-top: 5px;
+      margin-right: 4px;
+      width: 5.375em;
+    }
+
+    #submit_button_login {
+      margin-top: 5px;
+    }
+
+
+
+  .header_link {
+    position: relative;
+    min-height: 40px;
+    z-index: 2;
+  } 
+  .header_link ul {
+    min-height: 30px;
+    width: 180px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/icon_menu.png) no-repeat left top;
+  }
+  .header_link li {
+    display: none; /* hide all <li> items */
+    background-color: #000;
+    width: 200px;
+    margin: 0;
+    padding-left: 20px;
+  }
+  .header_link .current {
+    display: block; /* show only current <li> item */
+  }
+  .header_link a {
+    padding: 5px 5px 5px 32px;
+    text-align: left;
+  }
+  .header_link .current a {
+    background: none;
+    color: #666;
+  }
+
+  /* on header_link hover */
+  .header_link ul:hover {
+    background-image: none;
+  }
+  .header_link ul:hover li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  .header_link ul:hover .current {
+    background: url(icons/responsivenav.svg) no-repeat 10px 7px;
+  }
+
+  /* right header_link */
+  .header_link.right ul {
+    left: auto;
+    right: 0;
+  }
+
+  /* center header_link */
+  .header_link.center ul {
+    left: 50%;
+    margin-left: -90px;
+  }
+  
 }
 
 .register_link{
@@ -614,4 +676,3 @@ footer a.by{
 #message{
   color: #fff;
 }
-
