@@ -190,6 +190,29 @@ header {
   }
 }
 
+.header_link input {
+  margin-top: 15px;
+  margin-right: 4px;
+  width: 150px;
+}
+
+.header_link button {
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 40em) {
+  .header_link a {
+    padding: 1.02em 1.3em;
+    text-align: center;
+    border-top: 0;
+    float: left;
+    margin: 0;
+  }
+}
+
+/* ------------------------------------------
+  FIXED HEADER A TAGS
+--------------------------------------------- */
 .header_link a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   text-decoration: none;
@@ -210,26 +233,9 @@ header {
   text-decoration: none;
 }
 
-.header_link input {
-  margin-top: 15px;
-  margin-right: 4px;
-  width: 150px;
-}
-
-.header_link button {
-  margin-top: 15px;
-}
-
-@media screen and (min-width: 40em) {
-  .header_link a {
-    padding: 1.02em 1.3em;
-    text-align: center;
-    border-top: 0;
-    float: left;
-    margin: 0;
-  }
-}
-/* INPUTS FOR LOGIN */
+/* ------------------------------------------
+ INPUTS FOR LOGIN
+--------------------------------------------- */
 .header_inputs {
   width: 350px;
   height: 50px;
@@ -251,10 +257,12 @@ header {
     float: right;
     color: #fff;
   }
+/* ------------------------------------------
+  HEADER LINK RESPONSIVE VERSION
+--------------------------------------------- */
+@media screen and (max-width: 1000px) { /* temporary solution */
 
-/* HEADER LINK RESPONSIVE VERSION */
-@media screen and (max-width: 750px) {
-
+/* login inputs */
     .header_inputs {
       position: absolute;
       top: 0;
@@ -273,7 +281,7 @@ header {
     }
 
 
-
+/* navigation bar responsive */
   .header_link {
     position: relative;
     min-height: 40px;
@@ -331,6 +339,7 @@ header {
   }
   
 }
+
 
 .register_link{
   float: right;
@@ -482,74 +491,85 @@ header {
   FOOTER STYLING
 --------------------------------------------- */
 
-footer{
+footer {
     text-align:center;
     font-size:16px;
-    background: #FFF;
-    color:#000;
+    background: #1C1C1C;
+    color:#848484;
     height: 80px;
     padding-top: 10px;
     border-top: 7px solid black;
 }
 
-footer p{
+footer p {
     margin-bottom:-2.5em;
     position:relative;
 }
 
-footer a,footer a:visited{
-    color:#cccccc;
-    background-color:#213e4a;
-    padding:2px 4px;
+footer a,footer a:visited {
+    color:#1C1C1C;
+    background-color:#fff;
+    padding:10px;
     z-index:100;
+    border-radius: 50%;
 }
 
-footer a:hover{
+footer a:hover {
     text-decoration:none;
-    background-color:#142830;
+    background-color:#848484;
 }
 
-footer a.by{
+footer a.by {
     float:left;
+}
+
+.copyright {
+  float: left;
+  margin-left: 10%;
+  margin-top: 10px;
+}
+
+.back_up {
+  margin-top: -25px;
 }
 
 /* ------------------------------------------
   SECTIONS AND ANIMATIONS
 --------------------------------------------- */
 
-#home{
+#home {
   background-image: url('../images/picc.it_.jpg');
   background-size:100% 100%;
   color:#424242;
   margin-top: 80px; /* very important, change it together with header height */
 }
 
-#service{
+#service {
   background-image: url('../images/html5.jpg');
   background-size:100% 100%;
   color:#fff;
   margin-top: 80px; /* very important, change it together with header height */
 }
 
-#home_left{
+#home_left {
   width: 50%;
   float: left;
 }
 
-#home_right{
+#home_right {
   width: 50%;
   float: left;
 }
 
-#section2, #section4{
+#section2, #section4 {
   background: #FAAC58;
 }
 
-#home_l{
+#home_l {
   text-align: right;
 }
 
-#home_r{
+#home_r {
   text-align: left;
 }
 
@@ -561,30 +581,44 @@ footer a.by{
   INPUTS
 --------------------------------------------- */
 
-#input_100{
+#input_100 {
   width:100%;
 }
 
-#input_70{
+#input_70 {
   width: 70%;
 }
 
-#send_mail{
+#send_mail {
   width:100%;
   margin-bottom: 20px;
 }
 
 /* PROFILE INPUTS AND MISC */
 
-#profile_input{
+#profile_input {
   text-align: center;
   margin-bottom: 5px;
 }
 
-#confirm_profile{
-  width:30%;
-  float: right;
+#confirm_profile {
+  width:50%;
   margin-top: 10px;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+@media screen and (max-width: 600px) {
+  #confirm_profile {
+    font-size: 16px;
+  }
+  
+  .copyright{
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 5%;
+  }
+
 }
 
 #profile_misc{
