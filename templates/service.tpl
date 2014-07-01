@@ -2,7 +2,6 @@
     <section id="service">
     <div class="container">
       <div id="home_l">
-      <div id="home_left">
 
       <!-- Profile page -->
       <div id="profile_container">
@@ -34,7 +33,6 @@
            </div>
               <div id="message">{{message_box}}</div>
         </form>            
-      </div>
       </div>
       </div>
 

@@ -112,7 +112,7 @@ section {
   border-bottom: 1px solid #999;
   text-align: center;
   padding: 100px 0 0;
-  min-height: 800px;
+  min-height: 600px;
   width: 100%;
 }
 
@@ -378,11 +378,12 @@ header {
   display: block;
   text-align: center;
   vertical-align: middle;
-  border: black solid 2px;
+  background: #000;
 }
 
 .nav-collapse .active a {
-  background: #000;
+  background: none;
+  border: black solid 2px;
 }
 
 .nav-collapse ul ul a {
@@ -542,6 +543,7 @@ footer a.by {
   background-size:100% 100%;
   color:#424242;
   margin-top: 80px; /* very important, change it together with header height */
+  height: 800px;
 }
 
 #service {

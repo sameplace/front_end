@@ -1,7 +1,7 @@
 <!-- HOME START -->
     <section id="home">
     <div class="container">
-        <h1 class="expandOpen">Template HTML5</h1>
+        <h1 class="expandOpen">SAMEPLACE</h1>
       <div id="home_left">
           <p id="home_l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
           Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac
