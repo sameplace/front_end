@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/responsive-nav.js"></script>
     <script src="js/angular.min.js" type="text/javascript"></script>
     <script src="js/angular-ui-bootstrap.js" type="text/javascript"></script>
@@ -17,7 +19,7 @@
 
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script
 
-    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
   </head>
 
 <!-- applied module and controller -->

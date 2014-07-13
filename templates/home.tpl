@@ -1,51 +1,44 @@
 <!-- HOME START -->
     <section id="home">
-    <div class="container">
-        <h1 class="expandOpen">SAMEPLACE</h1>
-      <div id="home_left">
-          <p id="home_l">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
-          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac
-           vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. 
-           Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. 
-           Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, 
-           vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi.
-            Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
-            Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin 
-            leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
-          </p>
+      <div class="container">
+      <div class="col-xs-8">
+          <h1 class="expandOpen" id="headline_home"><strong>A real-time deal-engagement dashboard in the palm of your hand</strong></h1>
+            <p id="main_paragraph">
+            Sameplace uses the email exchanges you and 
+            your sales team are already having with pipeline 
+            opportunities to extract and inform you of key deal 
+            engagement metrics you want to know.
+            </p>
       </div>
-      <div id="home_right">
-          <p id="home_r">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
-          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
-          Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo ut molestie ornare. 
-          Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. Suspendisse id est blandit, volutpat turpis a, dictum dolor. 
-          Praesent aliquet sapien non luctus varius. Integer lacus neque, vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit. Curabitur nec iaculis mi. Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse 
-          ac vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin leo 
-          ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
-          </p>
-      </div>
-    </div>
+      <div class="col-xs-4">
+      </div> 
+      <br clear="all">
+      <div class="col-xs-4"></div>
 
+      <div class="col-xs-8" id="home_content">
+        <h1 class="expandOpen" id="headline_home"><strong>Examples</strong></h1>
+        <ul style="padding-left:30px;">
+          <li>How responsive are buyers to my sales team’s emails? </li>
+          <li>Are buyers becoming more or less engaged? </li>
+          <li>What sales content have we shared with an opportunity? </li>
+          <li>How long is it taking my team to respond to buyer questions?</li>
+        </ul>
+      </div> 
     </section>
 
 <!-- Profile Page START -->
     <section id="section1">
     <div class="container">
-      <h1>Section 1</h1>
       <div id="section1_p">
-      <!-- Profile page -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
-          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac
-           vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. 
-           Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. 
-           Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, 
-           vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi.
-            Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
-            Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin 
-            leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi.
-          </p>
+        <div class="col-xs-8" id="headline_home">
+         <h1 id="big_h_elem"><strong>ALL GAIN WITH NO PAIN</strong></h1>
+
+         <h2><strong>No data entry required. No IT setup. No Kidding.</strong></h2>
+         <p id="main_paragraph">Sameplace is a mobile app and service that you can be 
+         beneﬁting from in less than 5 minutes.  </p> 
+         </div>
+        <div class="col-xs-4">
+        </div>  
       </div>      
     </div>
 
