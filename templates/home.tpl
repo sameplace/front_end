@@ -35,7 +35,7 @@
 
          <h2><strong>No data entry required. No IT setup. No Kidding.</strong></h2>
          <p id="main_paragraph">Sameplace is a mobile app and service that you can be 
-         beneﬁting from in less than 5 minutes.  </p> 
+         beneﬁting from in less than 5 minutes. </p> 
          </div>
         <div class="col-xs-4">
         </div>  
@@ -47,17 +47,24 @@
 <!-- SECTION 2 START -->
     <section id="section2">
     <div class="container">
-      <h1>Section 2</h1>
       <div id="section2_p">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi. 
-          Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac
-           vulputate risus. Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. 
-           Duis sollicitudin leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. In hac habitasse platea dictumst. 
-           Suspendisse id est blandit, volutpat turpis a, dictum dolor. Praesent aliquet sapien non luctus varius. Integer lacus neque, 
-           vestibulum at fermentum vitae, iaculis sit amet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec iaculis mi.
-            Fusce ac volutpat ante, nec lacinia lectus. Duis non nisl felis. Phasellus in lacinia lacus. Suspendisse ac vulputate risus. 
-            Integer quis sem elit. Sed pretium mauris ac rhoncus porttitor. Quisque pharetra dolor non sodales feugiat. Duis sollicitudin 
-            leo ut molestie ornare. Nunc sed purus egestas, molestie metus tincidunt, lobortis mi. 
+      <div class="col-xs-8" id="headline_home">
+
+       <h4>STAY UP TO DATE WITH PRODUCT ANNOUNCEMENTS</h4>
+       <p id="main_paragraph">
+        <form class="form-inline" role="form" ng-submit="processSubmit()">
+          <input type="email" class="form-control" placeholder="Email" id="email_input" ng-model="email_subscribe">
+          <button type="submit" class="btn btn-success">Subscribe</button>
+        </form>
+        <br clear="all">
+        <button class="btn btn-lg btn-facebook" id="social_button"><i class="fa fa-facebook"></i></button>
+        <button class="btn btn-lg btn-twitter" id="social_button"><i class="fa fa-twitter"></i></button>
+        <button class="btn btn-lg btn-linkedin" id="social_button"><i class="fa fa-linkedin"></i></button>
+        {{message_submit}}
+       </p> 
+       </div>
+      <div class="col-xs-4">
+      </div>    
       </div>
     </div>
     </section>

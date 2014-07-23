@@ -596,7 +596,9 @@ footer a.by {
 }
 
 #section2, #section4 {
-  background: #FAAC58;
+  background: #1C1C1C;
+  color: #fff;
+  min-height: 350px;
 }
 
 #home_l {
@@ -640,6 +642,11 @@ footer a.by {
   margin-top: 10px;
   margin-left:auto; 
   margin-right:auto;
+}
+
+#email_input {
+  width: 50%;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 600px) {
@@ -743,4 +750,18 @@ footer a.by {
 
 #message{
   color: #fff;
+}
+
+#social_button {
+  margin-right: 3px;
+  border-radius: 0;
+  background-color: #424242;
+  border: #424242;
+}
+
+#social_button:hover {
+  margin-right: 3px;
+  border-radius: 0;
+  background-color: #848484;
+  border: #424242;
 }

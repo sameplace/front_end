@@ -41,6 +41,17 @@ function mainController($scope, $http) {
 			});
 		};
 
+		$scope.formSubmitData = {};
+		$scope.processSubmit = function() {
+			$scope.formSubmitData.email = $scope.email_subscribe;
+
+			$http.post('libs/subscribe.php', $scope.formSubmitData)
+			.success(function(json) {
+				$scope.message_submit = 'Thank you for subscribing!';
+
+			});
+		};
+
 	//function ChangeColor changes the color of active tab, and stays that way until another tab is clicked.
 	$scope.tabs = [];
 		$scope.ChangeColor = function(nr) {
