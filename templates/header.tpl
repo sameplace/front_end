@@ -35,7 +35,8 @@
     
 
     </div><!-- /.navbar-collapse -->
-    <form ng-submit="processSubmit()">
+    {{message_submit}}
+    <form ng-submit="processLogin()">
      <div class="header_inputs">
          <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email">
          <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="password">

@@ -30,11 +30,12 @@ function mainController($scope, $http) {
 
 		//function processSubmit takes text inputs from login, and send all information to php file, for now it responds in message_submit div
 		$scope.formSubmitData = {};
-		$scope.processSubmit = function() {
+		$scope.processLogin = function() {
 			$scope.formSubmitData.email = $scope.email;
 			$scope.formSubmitData.password = $scope.password;
+			$scope.formSubmitData.login = true;
 
-			$http.post('libs/test.php', $scope.formSubmitData)
+			$http.post('service/login.php', $scope.formSubmitData)
 			.success(function(json) {
 				$scope.message_submit = json;
 
