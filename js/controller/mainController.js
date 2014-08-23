@@ -34,15 +34,12 @@ function mainController($scope, $http) {
 			$scope.formSubmitData.email = $scope.email;
 			$scope.formSubmitData.password = $scope.password;
 			$scope.formSubmitData.login = true;
-			// authToken = headers('A-Token');
-			// var headers = { 'Authorization': authToken };
 
 			$http.post('https://secure.bitway.com/sp/a428.php', $scope.formSubmitData/*, { headers: headers}*/)
 			.success(function(json) {
 				$scope.message_submit = json;
 
 			});
-			
 		};
 
 		$scope.formSubmitData = {};
