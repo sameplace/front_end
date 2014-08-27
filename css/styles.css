@@ -103,7 +103,7 @@ p {width: 90%; margin: 0 auto; }
 @media screen and (max-width: 1000px) { /* temporary solution */
 
 /* login inputs */
-  .header_inputs { position: absolute; top: 0; right: 0; width: 230px; }
+  .header_inputs_responsive { position: absolute; top: 0; right: 0; width: 230px; display: block; }
   .header_inputs input { margin-top: 5px; width: 5.375em; }
   #submit_button_login { margin-top: 5px; }
   #navigation_header a { font-size: 14px; margin-left: -10px; }
@@ -169,13 +169,14 @@ p {width: 90%; margin: 0 auto; }
   FOOTER STYLING
 --------------------------------------------- */
 
-footer {text-align:center; font-size:16px; background: #1C1C1C; color:#848484; height: 80px; padding-top: 10px; border-top: 3px solid black; }
-footer p {margin-bottom:-2.5em; position:relative; }
-footer a,footer a:visited {color:#1C1C1C; background-color:#fff; padding:10px; z-index:100; border-radius: 50%; }
+footer {text-align:center; font-size:16px; background: #1C1C1C; color:#848484; height: 80px; padding-top: 10px; margin-top: 2px; }
+footer p {margin-bottom:-2.5em; position: relative; }
+footer a,footer a:visited {color:#1C1C1C; background-color:#fff; z-index:100; border-radius: 50px; -moz-border-radius: 50px; padding: 10px; font-size: 12px; }
 footer a:hover {text-decoration:none; background-color:#848484; }
 footer a.by {float:left; }
 .copyright {float: left; margin-left: 10%; margin-top: 10px; }
 .back_up {margin-top: -25px; }
+.footer_content {padding-top: 15px;}
 
 /* ------------------------------------------
   SECTIONS AND ANIMATIONS
