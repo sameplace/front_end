@@ -133,7 +133,7 @@ p {width: 90%; margin: 0 auto; }
 
 .nav-collapse,
 .nav-collapse ul {position: fixed; right: 0; top: 50%; width: 20px; }
-.nav-collapse a {border-radius: 50%; height: 15px; width: 15px; display: block; text-align: center; vertical-align: middle; background: #000; }
+.nav-collapse a {border-radius: 50%; height: 12px; width: 12px; display: block; text-align: center; vertical-align: middle; background: #000; }
 .nav-collapse .active a {background: none; border: black solid 2px; }
 .nav-collapse ul ul a {background: #ca3716; }
 .nav-collapse li{margin-bottom: 10px; }

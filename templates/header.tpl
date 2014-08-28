@@ -36,14 +36,14 @@
 
     </div> -->
     <!-- /.navbar-collapse -->
-    {{message_submit}}
     <form ng-submit="processLogin()">
      <div class="header_inputs header_inputs_responsive">
          <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email">
          <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="password">
          <button type="submit" id="submit_button_login" class="btn btn-default">Login</button>
-       <a href="index.php?page=7">Press here to register</a>
+       <!-- <a href="index.php?page=7">Press here to register</a> -->
      </form>
+    {{message_submit}}
      </div>
   </div><!-- /.container-fluid -->
 </nav>

@@ -2,7 +2,7 @@
 
 	$file = $_SERVER['REQUEST_URI'];
 
-	if($file=="/index.php" || $file=="/"){
+	if($file=="/index.php" || $file=="/") {
 		$home = "<a href='#home' data-scroll></a>";
 		$section1 = "<a href='#section1' data-scroll></a>";
 		$section2 = "<a href='#section2' data-scroll></a>";
@@ -12,7 +12,6 @@
 		$section1 = "";
 		$section2 = "";
 	}
-
 ?>
 <div class="nav-collapse">
 <ul>

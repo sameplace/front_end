@@ -28,15 +28,18 @@ function mainController($scope, $http) {
 			});
 		};
 
-		//function processSubmit takes text inputs from login, and send all information to php file, for now it responds in message_submit div
+		//function processSubmit takes text inputs from login, and send all information to php file on web server, returning message, if user is logged in, or not
 		$scope.formSubmitData = {};
 		$scope.processLogin = function() {
-			$scope.formSubmitData.email = $scope.email;
-			$scope.formSubmitData.password = $scope.password;
-			$scope.formSubmitData.login = true;
 
-			$http.post('https://secure.bitway.com/sp/a428.php', $scope.formSubmitData/*, { headers: headers}*/)
-			.success(function(json) {
+			$scope.formData = {'email' : $scope.email, 'pass' : $scope.password};
+
+			$http({
+			method  :'POST',
+			url:'https://secure.bitway.com/sp/a428.php',
+			data: $.param($scope.formData),
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(json) {
 				$scope.message_submit = json;
 
 			});

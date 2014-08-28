@@ -12,10 +12,10 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/responsive-nav.js"></script>
-    <script src="js/angular.min.js" type="text/javascript"></script>
-    <script src="js/angular-ui-bootstrap.js" type="text/javascript"></script>
+    <script src="js/angular/angular.min.js" type="text/javascript"></script>
+    <script src="js/angular/angular-ui-bootstrap.js" type="text/javascript"></script>
     <script src="js/model/mainApp.js" type="text/javascript"></script>
     <script src="js/controller/mainController.js" type="text/javascript"></script>
     <script src="js/controller/tabsController.js" type="text/javascript"></script>

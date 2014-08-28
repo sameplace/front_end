@@ -96,9 +96,9 @@
             if ((loc > top && (loc < top + 500 || (top + viewport) >= bodyheight))) {
             selectActiveMenuItem(i);
               if(i==1)
-                var element = document.getElementById('section1_p').className = 'slideRight';
+                var element = document.getElementById('section1_p').className = 'expandUp';
               if(i==2)
-                var element = document.getElementById('section2_p').className = 'slideLeft';
+                var element = document.getElementById('section2_p').className = 'bigEntrance';
               if(i==3)
                 var element = document.getElementById('section3_p').className = 'slideUp';
               if(i==4)
