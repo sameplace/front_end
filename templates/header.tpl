@@ -36,13 +36,20 @@
 
     </div> -->
     <!-- /.navbar-collapse -->
-    <form ng-submit="processLogin()">
-     <div class="header_inputs header_inputs_responsive">
-         <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="email">
-         <input type="password" class="form-control" id="password" name="password" placeholder="Password" ng-model="password">
-         <button type="submit" id="submit_button_login" class="btn btn-default">Login</button>
-       <!-- <a href="index.php?page=7">Press here to register</a> -->
-     </form>
+    <div class="navbar-collapse collapse">
+     <div class="navbar-form navbar-right">
+      <ul class="list-inline">
+        <li><a id="toggler" onclick="showme('widget', this.id);" href="#">Log in</a></li>
+      </ul>
+      <form id="widget" ng-submit="processLogin()">
+        <div class="form-group">
+          <input type="email" placeholder="Email" class="form-control" id="email" name="email" ng-model="email" onblur="if (this.placeholder=='') this.placeholder='Email';" onfocus="if (this.placeholder=='Email') this.placeholder='';">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control" id="password" name="password" ng-model="password" onblur="if (this.placeholder=='') this.placeholder='Password';" onfocus="if (this.placeholder=='Password') this.placeholder='';">
+        </div>
+        <button type="submit" class="btn btn-success_head transition">Sign in</button>
+      </form>
     {{message_submit}}
      </div>
   </div><!-- /.container-fluid -->
