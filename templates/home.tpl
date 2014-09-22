@@ -60,7 +60,7 @@
         <button class="btn btn-lg btn-facebook" id="social_button"><i class="fa fa-facebook"></i></button>
         <button class="btn btn-lg btn-twitter" id="social_button"><i class="fa fa-twitter"></i></button>
         <button class="btn btn-lg btn-linkedin" id="social_button"><i class="fa fa-linkedin"></i></button>
-        {{message_submit}}
+        {{subscribe_message}}
        </p> 
        </div>
       <div class="col-xs-4">

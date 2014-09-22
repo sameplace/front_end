@@ -51,7 +51,7 @@ function mainController($scope, $http) {
 
 			$http.post('libs/subscribe.php', $scope.formSubmitData)
 			.success(function(json) {
-				$scope.message_submit = 'Thank you for subscribing!';
+				$scope.subscribe_message = json;
 
 			});
 		};
