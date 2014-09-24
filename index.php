@@ -6,6 +6,6 @@
 
   <?php include "templates/nav.tpl"; ?>
 
-  <?php Navigation::Nav(); Navigation::Secure(); DbBroker::Open(); ?>
+  <?php Navigation::Nav(); Navigation::Secure(); ?>
 
   <?php include "templates/footer.tpl"; ?>
