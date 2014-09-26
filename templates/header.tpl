@@ -15,8 +15,10 @@
          <div class="navbar-form navbar-right">
             <ul class="list-inline">
                
-               <!--  <li><a href="#">aaaa</a></li>
-                <li><a href="#">aaaaaaa</a></li> -->
+
+                <li><a href="#">aaaa</a></li>
+                <li><a href="#">aaaaaaa</a></li>
+
                 <li><a id="toggler" href="#">Log in</a></li>
 
                           </ul>

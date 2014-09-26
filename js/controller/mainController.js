@@ -1,5 +1,5 @@
 function mainController($scope, $http) {
-
+	
 	//function processForm takes text inputs from profile area, and send all information to php file, for now it responds in message_box div
 	$scope.formData = {};
 		$scope.processForm = function() {
@@ -39,9 +39,10 @@ function mainController($scope, $http) {
 			url:'https://secure.bitway.com/sp/a428.php',
 			data: $.param($scope.formData),
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
-			}).success(function(json) {
-				$scope.message_submit = json;
-
+			}).success(function(data, status, header) {
+				$scope.message_submit = data;
+			}).then(function(a) {
+				console.log(a.headers('cookie'));
 			});
 		};
 
