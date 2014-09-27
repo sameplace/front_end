@@ -43,8 +43,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.message_submit = data;
-				// location.reload();
-			}).then(function(response) {
 			});
 		};
 
@@ -59,9 +57,9 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				// $scope.message_submit = data;
-			}).then(function(response) {
 			});
 		};
+
 
 		$scope.logout = function() {
 

