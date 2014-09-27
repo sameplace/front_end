@@ -11,18 +11,20 @@
     <script src="js/scroll.js"></script>
     <script src="js/fixed-responsive-nav.js"></script>
     <script>
-        $(function() {
-            function runEffect() {
-              var selectedEffect = "blind";
-              $( "#widget" ).toggle( selectedEffect, 500 );
-            };
-         
-            $( "#toggler" ).click(function() {
-              runEffect();
-              $('#widget').css('display', 'block');
-              $('#widget').css('opacity', '1');
-            });
-          });
+        function showme(id, linkid) {
+                    var divid = document.getElementById(id);
+                    var toggleLink = document.getElementById(linkid);
+                    if (divid.style.visibility == 'visible') {
+                        toggleLink.innerHTML = 'Log in';
+                        divid.style.visibility = 'hidden';
+                        divid.style.opacity = '0';
+                    }
+                    else {
+                        toggleLink.innerHTML = 'Close';
+                        divid.style.visibility = 'visible';
+                        divid.style.opacity = '1';
+                    }
+                }
     </script>
   </body>
 </html>

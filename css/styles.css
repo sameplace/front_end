@@ -54,11 +54,7 @@ p {width: 90%; margin: 0 auto; }
   FIXED HEADER
 --------------------------------------------- */
 
-<<<<<<< HEAD
 #header { background: #1C1C1C; position: fixed; z-index: 3000; width: 100%; top: 0; padding: 10px; height: 60px; }
-=======
-#header { background: #1C1C1C; position: fixed; z-index: 3; width: 100%; top: 0; height: 60px; border: none; border-radius: 0;}
->>>>>>> refs/remotes/origin/master
 .logo {-webkit-tap-highlight-color: rgba(0,0,0,0); text-decoration: none; font-weight: bold; line-height: 55px; padding: 0 20px; color: #fff; float: left; font-size: 22px; }
 #login { float: right; }
 
@@ -187,7 +183,7 @@ footer a.by {float:left; }
 --------------------------------------------- */
 
 /* home elements start*/
-#home {background: url('../images/ink.jpg') no-repeat left center;  color:#000;  /* very important, change it together with header height */ min-height: 800px; background-attachment: fixed;}
+#home {background-image: url('../images/ink.jpg'); background-size:100% 100%; color:#000; margin-top: 80px; /* very important, change it together with header height */ min-height: 800px; }
 #headline_home {text-align: left; }
 #home_content li {text-align: left; font-size: 26px; }
 #main_paragraph {font-size: 26px; }
@@ -240,7 +236,6 @@ footer a.by {float:left; }
 #message{color: #fff; }
 #social_button {margin-right: 3px; border-radius: 0; background-color: #424242; border: #424242; }
 #social_button:hover {margin-right: 3px; border-radius: 0; background-color: #848484; border: #424242; }
-<<<<<<< HEAD
 #widget { visibility: hidden; margin-top: 10px; }
 .navbar-form { margin-top: 15px; }
 .navbar-form .list-inline { margin:0; line-height: 14px; font-size: 12px; margin-top: 5px; }
@@ -249,30 +244,12 @@ footer a.by {float:left; }
 .navbar-form .list-inline li:last-child a { border:none; }
 .navbar-form.navbar-right form {}
 .navbar-form.navbar-right input { margin-bottom: 0; height: 34px; line-height: 18px; border-radius: 5px; padding: 6px 20px 6px 20px; } 
-=======
-
-#widget {height: 60px; line-height: 60px; display: none; background: #1C1C1C; min-width: 460px;}
-.navbar-form { /* margin-top: 15px; */ }
-.navbar-form .list-inline { margin:0; line-height: 14px; font-size: 12px; margin-top: 5px; display: inline-block; float: right; height: 60px; line-height: 60px;}
-.navbar-form .list-inline li { padding:0; }
-.navbar-form .list-inline a { color:#fff; border-right:1px solid #fff; padding:0 10px; }
-.navbar-form .list-inline li:last-child a { border:none; }
-.navbar-header, .navbar-header .navbar-brand {height: 60px;line-height: 60px;padding: 0 20px}
-.navbar-header .navbar-brand {padding-left: 0;}
-.navbar-form.navbar-right {margin: 0;padding: 0;}
-.navbar-form.navbar-right .list-inline {margin: 0;float: left;}
-.container-fluid.ng-binding {background-color: #1C1C1C}
-.navbar-form.navbar-right input { margin-bottom: 0; height: 34px; line-height: 18px; border-radius: 5px; padding: 6px 20px 6px 20px; float: right; margin: 0;} 
-#widget .btn.btn-success.transition, #widget .form-group input {float:right;height: 34px;line-height: 32px;margin-top: 15px;padding:0 20px;margin-left: 5px;}
-#widget .form-group {display:block;float: left;}
->>>>>>> refs/remotes/origin/master
 .navbar-form.navbar-right input:focus {box-shadow:0px 0px 10px #e74e15; outline:none; border:1px solid transparent;} 
-.navbar-collapse form { position: absolute; top: 0; right: 80px; transition:all ease 0.3s; -moz-transition:all ease 0.3s; -o-transition:all ease 0.3s; -webkit-transition:all ease 0.3s; opacity: 0; width: auto; display: block;}
+.navbar-collapse form { position:absolute; top:4px; background-color:#373839; transition:all ease 0.3s; -moz-transition:all ease 0.3s; -o-transition:all ease 0.3s; -webkit-transition:all ease 0.3s; visibility: hidden; right: 100px; opacity: 0;}
 .btn-success_head, .btn-primary { background:#e74e15; border:none; color:#fff; }
 .btn-primary:hover { box-shadow:0px 0px 5px #e74e15; background:#e74e15; border:none; color:#fff; }
 .btn-success_head:hover { box-shadow:0px 0px 5px #fff; background:#e74e15; border:none; color:#fff; }
 .btn-primary.share:active, .btn-success_head.share:active, .btn-primary.share:focus, .btn-success_head.share:focus {box-shadow:0px 0px 10px #e74e15;outline:none;border:1px solid transparent;padding:20px !important; background:#e74e15;}
-<<<<<<< HEAD
 /* Technology page START */
 #service h1 {}
 #service > .container {background: rgba(48, 51, 53, 0.8);position: relative;z-index: 100;color: #fff;border-radius: 5px;padding: 20px 40px;}
@@ -317,13 +294,13 @@ table td {font-size:14px;}
   tr { border: 1px solid #ccc; }
   tr td {border: none;border-bottom: 1px solid #eee; position: relative;padding-left: 50%;}
   td:before {position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
-  td:nth-of-type(1):before { content: "Oid"; }
-  td:nth-of-type(2):before { content: "Date"; }
-  td:nth-of-type(3):before { content: "Hidden"; }
-  td:nth-of-type(4):before { content: "Private"; }
-  td:nth-of-type(5):before { content: "From"; }
-  td:nth-of-type(6):before { content: "IRT"; }
-  td:nth-of-type(7):before { content: "Subject"; }
+  td:nth-of-type(1):before { content: "First Name"; }
+  td:nth-of-type(2):before { content: "Last Name"; }
+  td:nth-of-type(3):before { content: "Job Title"; }
+  td:nth-of-type(4):before { content: "Favorite Color"; }
+  td:nth-of-type(5):before { content: "Wars of Trek?"; }
+  td:nth-of-type(6):before { content: "Name"; }
+  td:nth-of-type(7):before { content: "Date of Birth"; }
   tr:nth-of-type(odd) {/* IE10 Consumer Preview */ 
 background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #5C4D4D 100%);
 
@@ -363,22 +340,4 @@ background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%,
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   body {width: 495px;}
-=======
-.home-bg {position: absolute;top: 0;right: 0;left: 0;bottom: 0;}
-
-@media (max-width: 767px) {
-  .navbar-form.navbar-right:last-child {float: none;}
-  button.navbar-toggle {margin: 13px;}
-  .navbar-default .ng-binding .navbar-collapse, .navbar-default .ng-binding .navbar-form {border: 1px solid transparent;box-shadow: none;}
-  #widget {position: relative;height: auto;display: none;clear: both;right: 0;min-width:inherit;overflow: hidden;}
-  #widget .form-group {width:100%;float:none;}
-  #widget .btn.btn-success.transition {margin-bottom:20px;float:left;margin-left:0;}
-  .navbar-form.navbar-right .list-inline li:last-child {float:left;}
-  .navbar-form.navbar-right .list-inline li  a {border:none;border-left:1px solid #fff;}
-  .navbar-form.navbar-right .list-inline li:last-child a {border-left:none;padding-left:0;}
-}
-
-@media (min-width: 768px) and (max-width: 990px) {
-  .navbar-form.navbar-right input {max-width: 180px;}
->>>>>>> refs/remotes/origin/master
 }
