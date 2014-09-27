@@ -9,7 +9,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="http://bio.goslingmedia.com/welcome/home">Sameplace Logo</a>
+         <a class="navbar-brand" href="/">Sameplace Logo</a>
        </div>
        <div class="navbar-collapse collapse">
          <div class="navbar-form navbar-right">
@@ -17,20 +17,26 @@
                
            <!--      <li><a href="#"></a></li>
                 <li><a href="#"></a></li> -->
+            <?php if(isset($_SESSION['logged']) && $_SESSION['logged']==1): ?>
+                <li><a ng-click="logout()" href="#">Log out</a></li>
+                          </ul>
+            <?php else: ?>
                 <li><a id="toggler" onclick="showme('widget', this.id);" href="#">Log in</a></li>
 
                           </ul>
 
-          
-                       <form id="widget" ng-submit="processLogin()">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control" id="email" name="email" ng-model="email" onblur="if (this.placeholder=='') this.placeholder='Email';" onfocus="if (this.placeholder=='Email') this.placeholder='';">
-            </div>
+            
+             <form id="widget" ng-submit="processLogin()">
               <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control" id="password" name="password" ng-model="password" onblur="if (this.placeholder=='') this.placeholder='Password';" onfocus="if (this.placeholder=='Password') this.placeholder='';">
-            </div>
-              <button type="submit" class="btn btn-success transition">Sign in</button>
-            </form>
+                <input type="text" placeholder="Email" class="form-control" id="email" name="email" ng-model="email" onblur="if (this.placeholder=='') this.placeholder='Email';" onfocus="if (this.placeholder=='Email') this.placeholder='';">
+              </div>
+                <div class="form-group">
+                <input type="password" placeholder="Password" class="form-control" id="password" name="password" ng-model="password" onblur="if (this.placeholder=='') this.placeholder='Password';" onfocus="if (this.placeholder=='Password') this.placeholder='';">
+              </div>
+                <button type="submit" class="btn btn-success transition">Sign in</button>
+              </form>
+            <?php endif; ?>
+
          </div>
        </div><!--/.navbar-collapse -->
     {{message_submit}}

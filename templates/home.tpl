@@ -14,7 +14,6 @@
       </div> 
       <br clear="all">
       <div class="col-xs-4"></div>
-
       <div class="col-xs-8" id="home_content">
         <h1 class="expandOpen" id="headline_home"><strong>Examples</strong></h1>
         <ul style="padding-left:30px;">
@@ -41,8 +40,9 @@
         </div>  
       </div>      
     </div>
-
     </section>
+
+    <div ng-controller="catchData"></div>
 
 <!-- SECTION 2 START -->
     <section id="section2">
