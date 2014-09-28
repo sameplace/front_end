@@ -48,7 +48,6 @@ a:hover { outline: 0; }
 body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;color: #37302a; background: #fff; font: normal 100%/1.4 sans-serif; }
 section { border-bottom: 1px solid #999; text-align: center; padding: 100px 0 0; min-height: 450px; width: 100%; }
 h1 { margin-bottom: .5em; }
-p {width: 90%; margin: 0 auto; }
 
 /* ------------------------------------------
   FIXED HEADER
@@ -183,11 +182,17 @@ footer a.by {float:left; }
 --------------------------------------------- */
 
 /* home elements start*/
-#home {background-image: url('../images/ink.jpg'); background-size:100% 100%; color:#000; margin-top: 80px; /* very important, change it together with header height */ min-height: 800px; }
+#home {background-image: url('../images/ink.jpg'); background-size:100% 100%; color:#000; margin-top: 80px; /* very important, change it together with header height */ min-height: 700px; }
+.real_time_deal {background-image: url('../images/section_mobile_image.jpg'); background-size:100%; color:#fff;  /* very important, change it together with header height */ min-height: 700px; }
 #headline_home {text-align: left; }
+.main_section_par {text-align: right; font-size: 20px; color: #6D6D6E;  }
+.headline_home { text-align: right; font-family: 'Dosis' }
+.headline_home { font-size: 40px; }
 #home_content li {text-align: left; font-size: 26px; }
 #main_paragraph {font-size: 26px; }
 #big_h_elem {text-align: left; font-size: 46px; }
+.svm { font-size: 70px; margin-top: 80px; text-align: right; font-family: 'Dosis', sans-serif; }
+.grayc { color: #6D6D6E; }
 /* home elements end*/
 
 #service {background-image: url('../images/html5.jpg'); background-size:100% 100%; background-attachment: fixed; color:#fff; margin-top: 80px; /* very important, change it together with header height */ min-height: 800px; }
@@ -196,7 +201,7 @@ footer a.by {float:left; }
 #section2, #section4 {background: #1C1C1C; color: #fff; min-height: 350px; }
 #home_l {text-align: right; }
 #home_r {text-align: left; }
-#home_l, #home_r, #section1_p, #section2_p, #section3_p, #section4_p {visibility: hidden; }
+#home_l, #home_r, #section1_p, #section2_p, #section3_p, #section4_p, #svm1, #real_time1, #real_time2 { visibility: hidden; }
 
 /* ------------------------------------------
   INPUTS

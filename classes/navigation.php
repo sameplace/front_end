@@ -17,12 +17,15 @@ public static function Nav()
 	 	7 => 'register.tpl');
 
 	if(isset($_GET['page'])){
+		
 		$page = $_GET['page'];
-
-		if(array_key_exists($page, $pages))
-			include "templates/".$pages[$page];
-		else 
-			header("Location: index.php");
+		if($page!=1){
+			if(isset($_SESSION['logged']) && $_SESSION['logged']==1 && array_key_exists($page, $pages)){
+				include "templates/".$pages[$page];
+			} else {
+				header("Location: index.php");
+			}
+		}
 	}
 	else include "templates/home.tpl";
 }

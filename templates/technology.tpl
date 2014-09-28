@@ -1,57 +1,26 @@
-<section id="service">
+<section id="service" ngController="mainController" data-ng-init="catchData('get_data')">
 	<div class="container">
-		<h1>Dealspace</h1>
+		<h1>Dealspaces</h1>
 		<table>
 			<thead>
-			<tr>				<th>Oid</th>
-				<th>Date</th>
-				<th>Hidden</th>
-				<th>Private</th>
-				<th>From</th>
-				<th>IRT</th>
-				<th>Subject</th>
+			<tr>				
+				<th>Oid</th>
+				<th>Owner</th>
+				<th>cTime</th>
+				<th>mTime</th>
+				<th>Name</th>
+				<th>Type</th>
 			</tr>
 			</thead>
 			<tbody>
-			<tr>				<td>Lettuce Green</td>
-				<td>Trek</td>
-				<td>Digby Green</td>
-				<td>January 13, 1979</td>
-				<td>Gotham City</td>
-				<td>3.1</td>
-				<td>RBX-12</td>
-			</tr>
-			<tr>			  <td>Blue</td>
-			  <td>Wars</td>
-			  <td>John Smith</td>
-			  <td>July 19, 1968</td>
-			  <td>Athens</td>
-			  <td>N/A</td>
-			  <td>Edlund, Ben (July 1996).</td>
-			</tr>
-			<tr>			  <td>Smurflow</td>
-			  <td>Smurf</td>
-			  <td>Smurflane Smurfmutt</td>
-			  <td>Smurfuary Smurfteenth, 1945</td>
-			  <td>New Smurf City</td>
-			  <td>4.Smurf</td>
-			  <td>One</td>
-			</tr>
-			<tr>			  <td>Red</td>
-			  <td>Wars</td>
-			  <td>Lori Quivey</td>
-			  <td>July 5, 1956</td>
-			  <td>Paris</td>
-			  <td>3.4</td>
-			  <td>3451</td>
-			</tr>
-			<tr>			  <td>Blue</td>
-			  <td>Wars</td>
-			  <td>Steve 42nd</td>
-			  <td>December 13, 1982</td>
-			  <td>Las Vegas</td>
-			  <td>1.9</td>
-			  <td>Under the couch</td>
+
+			<tr ng-repeat="dealspace in dealspacesResult">	
+				<td>{{dealspace.oid}}</td>
+				<td>{{dealspace.owner}}</td>
+				<td>{{dealspace.cTime}}</td>
+				<td>{{dealspace.mTime}}</td>
+				<td>{{dealspace.name}}</td>
+				<td>{{dealspace.type}}</td>
 			</tr>
 			</tbody>
 		</table>

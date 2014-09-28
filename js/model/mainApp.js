@@ -42,29 +42,24 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				$scope.message_submit = data;
 				location.reload();
-			}).then(function(response) {
 			});
 		};
 
-		$scope.catchData = function() {
-
+		$scope.catchData = function(file) {
 
 			$http({
 			method  :'GET',
-			url:'libs/get_data.php',
+			url:'libs/'+file+'.php',
 			data: $.param($scope.formData),
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				// $scope.message_submit = data;
-			}).then(function(response) {
+				$scope.dealspacesResult = angular.fromJson(data);
 			});
 		};
 
 		$scope.logout = function() {
-
 
 			$http({
 			method  :'GET',

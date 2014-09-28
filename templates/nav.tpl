@@ -4,13 +4,15 @@
 
 	if($file=="/index.php" || $file=="/") {
 		$home = "<a href='#home' data-scroll></a>";
-		$section1 = "<a href='#section1' data-scroll></a>";
-		$section2 = "<a href='#section2' data-scroll></a>";
+		$section1 = "<a href='#section' data-scroll></a>";
+		$section2 = "<a href='#section1' data-scroll></a>";
+		$section3 = "<a href='#section2' data-scroll></a>";
 	}
 	else{
 		$home = "";
 		$section1 = "";
 		$section2 = "";
+		$section3 = "";
 	}
 ?>
 <div class="nav-collapse">
@@ -18,5 +20,6 @@
         <li class="active"><?php echo $home; ?></li>
         <li><?php echo $section1; ?></li>
         <li><?php echo $section2; ?></li>
+        <li><?php echo $section3; ?></li>
 </ul>    
 </div>

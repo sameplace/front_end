@@ -95,13 +95,17 @@
               //catching animation event
             if ((loc > top && (loc < top + 500 || (top + viewport) >= bodyheight))) {
             selectActiveMenuItem(i);
-              if(i==1)
-                var element = document.getElementById('section1_p').className = 'expandUp';
+              if(i==1){
+                var element = document.getElementById('real_time1').className = 'slideRight';
+                var element = document.getElementById('real_time2').className = 'slideLeft';
+              }
               if(i==2)
-                var element = document.getElementById('section2_p').className = 'bigEntrance';
+                var element = document.getElementById('section1_p').className = 'expandUp';
               if(i==3)
-                var element = document.getElementById('section3_p').className = 'slideUp';
+                var element = document.getElementById('section2_p').className = 'bigEntrance';
               if(i==4)
+                var element = document.getElementById('section3_p').className = 'slideUp';
+              if(i==5)
                 var element = document.getElementById('section4_p').className = 'fadeIn';
             }
         });
@@ -198,3 +202,4 @@
 
   MoveClass('home_l', 'slideRight');
   MoveClass('home_r', 'slideLeft');
+

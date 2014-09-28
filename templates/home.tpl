@@ -1,28 +1,54 @@
 <!-- HOME START -->
     <section id="home">
       <div class="container">
-      <div class="col-xs-8">
-          <h1 class="expandOpen" id="headline_home"><strong>A real-time deal-engagement dashboard in the palm of your hand</strong></h1>
-            <p id="main_paragraph">
-            Sameplace uses the email exchanges you and 
-            your sales team are already having with pipeline 
-            opportunities to extract and inform you of key deal 
-            engagement metrics you want to know.
-            </p>
+      <div class="col-xs-2"></div>
+      <div class="col-xs-10">
+          <h1 class="expandOpen headline_home"><strong>Know how engaged your buyers and sales team are across your entire deal pipeline.</strong></h1>
       </div>
-      <div class="col-xs-4">
-      </div> 
+
       <br clear="all">
-      <div class="col-xs-4"></div>
-      <div class="col-xs-8" id="home_content">
-        <h1 class="expandOpen" id="headline_home"><strong>Examples</strong></h1>
-        <ul style="padding-left:30px;">
-          <li>How responsive are buyers to my sales team’s emails? </li>
-          <li>Are buyers becoming more or less engaged? </li>
-          <li>What sales content have we shared with an opportunity? </li>
-          <li>How long is it taking my team to respond to buyer questions?</li>
-        </ul>
+
+      <div class="col-xs-1"></div>
+      <div class="col-xs-11" id="home_content">
+          <p class="main_section_par">
+          Sameplace puts a real-time deal-engagement dashboard in the palm of your hand.
+          </p>
       </div> 
+      <div class="col-xs-1"></div>
+      <div class="col-xs-11">
+      <div class="pulse svm">SIMPLE &middot; <span class="grayc">VISUAL</span> &middot; MOBILE</div>
+
+      </div>
+    </section>
+
+    <section id="section" class="real_time_deal">
+      <div class="container">
+      <div id="real_time1">
+        <div class="col-xs-8">
+            <h1 class="headline_home main_headline" id="headline_home"><strong>A real-time deal-engagement dashboard in the palm of your hand</strong></h1>
+              <p id="main_paragraph">
+              Sameplace uses the email exchanges you and 
+              your sales team are already having with pipeline 
+              opportunities to extract and inform you of key deal 
+              engagement metrics you want to know.
+              </p>
+        </div>
+        <div class="col-xs-4">
+        </div> 
+      </div>
+      <br clear="all">
+      <div id="real_time2">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-8" id="home_content">
+          <h1 id="headline_home"><strong>Examples</strong></h1>
+          <ul style="padding-left:30px;">
+            <li>How responsive are buyers to my sales team’s emails? </li>
+            <li>Are buyers becoming more or less engaged? </li>
+            <li>What sales content have we shared with an opportunity? </li>
+            <li>How long is it taking my team to respond to buyer questions?</li>
+          </ul>
+        </div> 
+      </div>
     </section>
 
 <!-- Profile Page START -->
@@ -41,8 +67,6 @@
       </div>      
     </div>
     </section>
-
-    <div ng-controller="catchData"></div>
 
 <!-- SECTION 2 START -->
     <section id="section2">
