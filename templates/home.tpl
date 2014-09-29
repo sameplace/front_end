@@ -1,23 +1,22 @@
 <!-- HOME START -->
     <section id="home">
+      
+      <div class="demo-container">
+        <div id="placeholder" class="demo-placeholder"></div>
+      </div>
       <div class="container">
-      <div class="col-xs-2"></div>
-      <div class="col-xs-10">
+      <div class="col-xs-12">
           <h1 class="expandOpen headline_home"><strong>Know how engaged your buyers and sales team are across your entire deal pipeline.</strong></h1>
       </div>
-
-      <br clear="all">
-
-      <div class="col-xs-1"></div>
-      <div class="col-xs-11" id="home_content">
+      <div class="col-xs-12" id="home_content">
           <p class="main_section_par">
           Sameplace puts a real-time deal-engagement dashboard in the palm of your hand.
           </p>
       </div> 
-      <div class="col-xs-1"></div>
-      <div class="col-xs-11">
-      <div class="pulse svm">SIMPLE &middot; <span class="grayc">VISUAL</span> &middot; MOBILE</div>
-
+      <div class="col-xs-12">
+        <div class="aaa">
+          <div class="expandOpen svm">SIMPLE <span class="header_dot">&middot;</span> <span class="grayc">VISUAL</span> <span class="header_dot">&middot;</span> MOBILE</div>
+        </div>
       </div>
     </section>
 

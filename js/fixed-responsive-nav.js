@@ -191,15 +191,7 @@
       }
     }
 
-  var MoveClass = function(class_name, animation){
+  setTimeout(function(){  $('.aaa').addClass('pulse'); }, 1000);
 
-    var classCheck = document.getElementById(class_name);
 
-    if (typeof classCheck != 'undefined' && classCheck !== null) {
-      var element = document.getElementById(class_name).className = animation;
-    }
-  }
-
-  MoveClass('home_l', 'slideRight');
-  MoveClass('home_r', 'slideLeft');
 

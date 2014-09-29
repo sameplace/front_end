@@ -46,14 +46,14 @@ a:hover { outline: 0; }
 --------------------------------------------- */
 
 body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;color: #37302a; background: #fff; font: normal 100%/1.4 sans-serif; }
-section { border-bottom: 1px solid #999; text-align: center; padding: 100px 0 0; min-height: 450px; width: 100%; }
+section { border-bottom: 1px solid #999; text-align: center; width: 100%; padding: 100px 0;}
 h1 { margin-bottom: .5em; }
 
 /* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
 
-#header { background: #1C1C1C; position: fixed; z-index: 3000; width: 100%; top: 0; padding: 10px; height: 60px; }
+#header { background: #1C1C1C; position: fixed; z-index: 3000; width: 100%; top: 0; padding: 10px; height: 60px; border: none; border-radius: 0;}
 .logo {-webkit-tap-highlight-color: rgba(0,0,0,0); text-decoration: none; font-weight: bold; line-height: 55px; padding: 0 20px; color: #fff; float: left; font-size: 22px; }
 #login { float: right; }
 
@@ -182,12 +182,12 @@ footer a.by {float:left; }
 --------------------------------------------- */
 
 /* home elements start*/
-#home {background-image: url('../images/ink.jpg'); background-size:100% 100%; color:#000; margin-top: 80px; /* very important, change it together with header height */ min-height: 700px; }
+#home { color:#000; margin-top: 60px; /* very important, change it together with header height */  position: relative; min-height: 600px;}
 .real_time_deal {background-image: url('../images/section_mobile_image.jpg'); background-size:100%; color:#fff;  /* very important, change it together with header height */ min-height: 700px; }
 #headline_home {text-align: left; }
 .main_section_par {text-align: right; font-size: 20px; color: #6D6D6E;  }
 .headline_home { text-align: right; font-family: 'Dosis' }
-.headline_home { font-size: 40px; }
+.headline_home { font-size: 40px; margin-top: 80px;}
 #home_content li {text-align: left; font-size: 26px; }
 #main_paragraph {font-size: 26px; }
 #big_h_elem {text-align: left; font-size: 46px; }
@@ -198,7 +198,7 @@ footer a.by {float:left; }
 #service {background-image: url('../images/html5.jpg'); background-size:100% 100%; background-attachment: fixed; color:#fff; margin-top: 80px; /* very important, change it together with header height */ min-height: 800px; }
 #home_left {width: 50%; float: left; }
 #home_right {width: 50%; float: left; }
-#section2, #section4 {background: #1C1C1C; color: #fff; min-height: 350px; }
+#section2, #section4 {background: #1C1C1C; color: #fff; /* min-height: 350px; */ }
 #home_l {text-align: right; }
 #home_r {text-align: left; }
 #home_l, #home_r, #section1_p, #section2_p, #section3_p, #section4_p, #svm1, #real_time1, #real_time2 { visibility: hidden; }
@@ -282,12 +282,20 @@ table td {font-size:14px;}
   .navbar-form .list-inline a {padding: 0;}
   #widget {position: relative;margin: 0;padding: 0;right: auto;left: auto;background: none;visibility: visible;opacity: 1;}
   #toggler {display:none;}
+  #home {padding: 0;}
+  .headline_home {padding-top: 0;font-size: 36px;margin-top: 30px;margin-bottom: 0;}
+  .demo-container {max-height: 450px;}
+  .svm {margin-top: 20px;font-size: 30px;text-align: right;}
+  .header_dot {display: block;line-height: 20px;padding-right: 35px;}
+  .main_section_par {font-size:15px;}
 }
 @media (min-width: 768px) and (max-width: 991px) {
-
+  .svm {margin-top: 30px;font-size: 50px;}
+  .demo-container {max-height: 550px;}
+  .headline_home {margin-top: 0;font-size: 54px;}
 }
 @media (min-width: 992px) and (max-width: 1200px) {
-
+  .svm {margin-top: 0;}
 }
 @media (min-width: 1201px) {
 
@@ -339,10 +347,4 @@ background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFF
 
 /* W3C Markup, IE10 Release Preview */ 
 background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #254D46 100%);
-}
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  body {padding: 0;margin: 0;width: 320px;}
-}
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  body {width: 495px;}
 }
