@@ -131,7 +131,7 @@ h1 { margin-bottom: .5em; }
 .nav-collapse * {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .nav-collapse,
-.nav-collapse ul {position: fixed; right: 0; top: 50%; width: 20px; }
+.nav-collapse ul {position: fixed; right: 0; top: 50%; width: 20px; z-index: 100;}
 .nav-collapse a {border-radius: 50%; height: 12px; width: 12px; display: block; text-align: center; vertical-align: middle; background: #000; }
 .nav-collapse .active a {background: none; border: black solid 2px; }
 .nav-collapse ul ul a {background: #ca3716; }
@@ -173,9 +173,13 @@ footer p {margin-bottom:-2.5em; position: relative; }
 footer a,footer a:visited {color:#1C1C1C; background-color:#fff; z-index:100; border-radius: 50px; -moz-border-radius: 50px; padding: 10px; font-size: 12px; }
 footer a:hover {text-decoration:none; background-color:#848484; }
 footer a.by {float:left; }
+footer #goTop {transition:all ease 0.2s;-o-transition: all ease 0.2s;-webkit-transition:all ease 0.2s;-moz-transition:all ease 0.2s;}
+footer #goTop:hover {color: #fff;background: #5cb85c;padding: 15px;font-size: 16px;}
 .copyright {float: left; margin-left: 10%; margin-top: 10px; }
 .back_up {margin-top: -25px; }
-.footer_content {padding-top: 15px;}
+.footer_content {
+    padding: 15px;
+}
 
 /* ------------------------------------------
   SECTIONS AND ANIMATIONS
@@ -198,7 +202,8 @@ footer a.by {float:left; }
 #service {background-image: url('../images/html5.jpg'); background-size:100% 100%; background-attachment: fixed; color:#fff; margin-top: 80px; /* very important, change it together with header height */ min-height: 800px; }
 #home_left {width: 50%; float: left; }
 #home_right {width: 50%; float: left; }
-#section2, #section4 {background: #1C1C1C; color: #fff; /* min-height: 350px; */ }
+#section2, #section4 {background: #1C1C1C; color: #fff;font-family: 'Dosis';}
+#section2 {padding:50px 0;}
 #home_l {text-align: right; }
 #home_r {text-align: left; }
 #home_l, #home_r, #section1_p, #section2_p, #section3_p, #section4_p, #svm1, #real_time1, #real_time2 { visibility: hidden; font-family: 'Dosis';}
@@ -284,9 +289,9 @@ table td {font-size:14px;}
   #widget {position: relative;margin: 0;padding: 0;right: auto;left: auto;background: none;visibility: visible;opacity: 1;}
   #toggler {display:none;}
   #home {padding: 0;}
-  .headline_home {padding-top: 0;font-size: 36px;margin: 30px -10px 0 -10px;}
+  .headline_home {padding-top: 0;font-size: 32px;margin: 30px -10px 0 -10px;}
   #headline_home {font-size:28px;float:none;text-align:center;display:block;}
-  #main_paragraph {font-size:16px;}
+  #main_paragraph {font-size:16px;margin-top: 20px;}
   .demo-container {max-height: 450px;}
   .svm {margin-top: 20px;font-size: 30px;text-align: right;}
   .header_dot {display: block;line-height: 20px;padding-right: 40px;}
@@ -295,20 +300,32 @@ table td {font-size:14px;}
   #home_content li {font-size:16px;}
   #home_content {margin-top:30px;}
   #section1 {padding:30px 0;}
-  #big_h_elem {font-size:24px;}
+  #big_h_elem {font-size:24px;text-align: center;}
   #headline_home h2 {font-size:18px;margin-bottom:20px;font-weight:normal;}
   #headline_home p#main_paragraph {font-size:16px;}
+  #section2 {padding:30px 0 40px 0}
+  #email_input, #main_paragraph > form > button.btn-success {display:block;width:100%;margin-bottom:15px;}
+  #headline_home h4 {font-size: 22px;font-family: 'Dosis';}
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .svm {margin-top: 30px;font-size: 50px;}
   .demo-container {max-height: 550px;}
   .headline_home {margin-top: 0;font-size: 54px;}
+  #section2 {padding:50px 0}
+  #headline_home h4 {font-size: 22px;margin-bottom:15px;font-family: 'Dosis';}
+  #email_input, #main_paragraph > form > button.btn-success {margin-bottom:15px;}
+  #section2 {padding:40px 0;}
+  #headline_home h4 {font-size: 22px;font-family: 'Dosis';}
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .svm {margin-top: 0;}
+  #section2 {padding:40px 0;}
+  #headline_home h4 {font-size: 28px;font-family: 'Dosis';margin-bottom: 15px;}
+  #email_input, #main_paragraph > form > button.btn-success {margin-bottom:15px;}
 }
 @media (min-width: 1201px) {
-
+  #email_input, #main_paragraph > form > button.btn-success {margin-bottom:15px;}
+  #headline_home h4 {font-size: 34px;font-family: 'Dosis';margin-bottom: 15px;}
 }
 
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -324,37 +341,4 @@ table td {font-size:14px;}
   td:nth-of-type(5):before { content: "Wars of Trek?"; }
   td:nth-of-type(6):before { content: "Name"; }
   td:nth-of-type(7):before { content: "Date of Birth"; }
-  tr:nth-of-type(odd) {/* IE10 Consumer Preview */ 
-background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #5C4D4D 100%);
-
-/* Mozilla Firefox */ 
-background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #5C4D4D 100%);
-
-/* Opera */ 
-background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #5C4D4D 100%);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, #FFFFFF), color-stop(1, #5C4D4D));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #5C4D4D 100%);
-
-/* W3C Markup, IE10 Release Preview */ 
-background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #5C4D4D 100%);}  tr:nth-of-type(even) {/* IE10 Consumer Preview */ 
-background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #254D46 100%);
-
-/* Mozilla Firefox */ 
-background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #254D46 100%);
-
-/* Opera */ 
-background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #254D46 100%);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(radial, center center, 0, center center, 497, color-stop(0, #FFFFFF), color-stop(1, #254D46));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #254D46 100%);
-
-/* W3C Markup, IE10 Release Preview */ 
-background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #254D46 100%);
-}
+ 

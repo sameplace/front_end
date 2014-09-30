@@ -79,7 +79,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 
 			$http.post('libs/subscribe.php', $scope.formSubmitData)
 			.success(function(json) {
-				$scope.subscribe_message = json;
 
 			});
 		};
