@@ -23,7 +23,7 @@
     <section id="section" class="real_time_deal">
       <div class="container">
       <div id="real_time1">
-        <div class="col-xs-8">
+        <div class="col-xs-12 col-sm-8">
             <h1 class="headline_home main_headline" id="headline_home"><strong>A real-time deal-engagement dashboard in the palm of your hand</strong></h1>
               <p id="main_paragraph">
               Sameplace uses the email exchanges you and 
@@ -32,15 +32,11 @@
               engagement metrics you want to know.
               </p>
         </div>
-        <div class="col-xs-4">
-        </div> 
       </div>
-      <br clear="all">
-      <div id="real_time2">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-8" id="home_content">
+      <div id="real_time2" class="clearfix">
+        <div class="col-xs-12 col-sm-8" id="home_content">
           <h1 id="headline_home"><strong>Examples</strong></h1>
-          <ul style="padding-left:30px;">
+          <ul>
             <li>How responsive are buyers to my sales team’s emails? </li>
             <li>Are buyers becoming more or less engaged? </li>
             <li>What sales content have we shared with an opportunity? </li>
@@ -54,15 +50,12 @@
     <section id="section1">
     <div class="container">
       <div id="section1_p">
-        <div class="col-xs-8" id="headline_home">
+        <div class="col-xs-12 col-sm-8" id="headline_home">
          <h1 id="big_h_elem"><strong>ALL GAIN WITH NO PAIN</strong></h1>
-
          <h2><strong>No data entry required. No IT setup. No Kidding.</strong></h2>
          <p id="main_paragraph">Sameplace is a mobile app and service that you can be 
          beneﬁting from in less than 5 minutes. </p> 
          </div>
-        <div class="col-xs-4">
-        </div>  
       </div>      
     </div>
     </section>
@@ -71,7 +64,7 @@
     <section id="section2">
     <div class="container">
       <div id="section2_p">
-      <div class="col-xs-8" id="headline_home">
+      <div class="col-xs-12 col-sm-8" id="headline_home">
 
        <h4>STAY UP TO DATE WITH PRODUCT ANNOUNCEMENTS</h4>
        <p id="main_paragraph">

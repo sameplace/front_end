@@ -168,7 +168,7 @@ h1 { margin-bottom: .5em; }
   FOOTER STYLING
 --------------------------------------------- */
 
-footer {text-align:center; font-size:16px; background: #1C1C1C; color:#848484; height: 80px; padding-top: 10px; margin-top: 2px; }
+footer {text-align:center; font-size:16px; background: #1C1C1C; color:#848484;  padding-top: 10px; margin-top: 2px; }
 footer p {margin-bottom:-2.5em; position: relative; }
 footer a,footer a:visited {color:#1C1C1C; background-color:#fff; z-index:100; border-radius: 50px; -moz-border-radius: 50px; padding: 10px; font-size: 12px; }
 footer a:hover {text-decoration:none; background-color:#848484; }
@@ -183,14 +183,14 @@ footer a.by {float:left; }
 
 /* home elements start*/
 #home { color:#000; margin-top: 60px; /* very important, change it together with header height */  position: relative; min-height: 600px;}
-.real_time_deal {background-image: url('../images/section_mobile_image.jpg'); background-size:100%; color:#fff;  /* very important, change it together with header height */ min-height: 700px; }
-#headline_home {text-align: left; }
+.real_time_deal {background: url('http://i.huffpost.com/gen/1462378/thumbs/o-BAR-CHART-WITH-SMARTPHONES-facebook.jpg') center center no-repeat;  color:#fff;  /* very important, change it together with header height */ min-height: 700px; text-shadow: 1px 1px 5px #000;}
+#headline_home {text-align: left; font-size: 40px;}
 .main_section_par {text-align: right; font-size: 20px; color: #6D6D6E;  }
 .headline_home { text-align: right; font-family: 'Dosis' }
-.headline_home { font-size: 40px; margin-top: 80px;}
+.headline_home { font-size: 40px; margin-top: 0px;}
 #home_content li {text-align: left; font-size: 26px; }
 #main_paragraph {font-size: 26px; }
-#big_h_elem {text-align: left; font-size: 46px; }
+#big_h_elem {text-align: left; font-size: 46px; font-family: 'Dosis';}
 .svm { font-size: 70px; margin-top: 80px; text-align: right; font-family: 'Dosis', sans-serif; }
 .grayc { color: #6D6D6E; }
 /* home elements end*/
@@ -201,7 +201,8 @@ footer a.by {float:left; }
 #section2, #section4 {background: #1C1C1C; color: #fff; /* min-height: 350px; */ }
 #home_l {text-align: right; }
 #home_r {text-align: left; }
-#home_l, #home_r, #section1_p, #section2_p, #section3_p, #section4_p, #svm1, #real_time1, #real_time2 { visibility: hidden; }
+#home_l, #home_r, #section1_p, #section2_p, #section3_p, #section4_p, #svm1, #real_time1, #real_time2 { visibility: hidden; font-family: 'Dosis';}
+#home_content {margin-top:80px;clear: both;float: right;}
 
 /* ------------------------------------------
   INPUTS
@@ -283,11 +284,20 @@ table td {font-size:14px;}
   #widget {position: relative;margin: 0;padding: 0;right: auto;left: auto;background: none;visibility: visible;opacity: 1;}
   #toggler {display:none;}
   #home {padding: 0;}
-  .headline_home {padding-top: 0;font-size: 36px;margin-top: 30px;margin-bottom: 0;}
+  .headline_home {padding-top: 0;font-size: 36px;margin: 30px -10px 0 -10px;}
+  #headline_home {font-size:28px;float:none;text-align:center;display:block;}
+  #main_paragraph {font-size:16px;}
   .demo-container {max-height: 450px;}
   .svm {margin-top: 20px;font-size: 30px;text-align: right;}
-  .header_dot {display: block;line-height: 20px;padding-right: 35px;}
-  .main_section_par {font-size:15px;}
+  .header_dot {display: block;line-height: 20px;padding-right: 40px;}
+  .main_section_par {font-size: 14px;margin: 0 -10px;}
+  .real_time_deal {padding:0 0 30px 0;min-height: inherit;}
+  #home_content li {font-size:16px;}
+  #home_content {margin-top:30px;}
+  #section1 {padding:30px 0;}
+  #big_h_elem {font-size:24px;}
+  #headline_home h2 {font-size:18px;margin-bottom:20px;font-weight:normal;}
+  #headline_home p#main_paragraph {font-size:16px;}
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .svm {margin-top: 30px;font-size: 50px;}

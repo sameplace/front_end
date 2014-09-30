@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="clearfix">
     <div class="col-xs-12 footer_content">
     <div class="col-xs-3"></div>
     <div class="col-xs-6">Copyright 2014, Sameplace</div>

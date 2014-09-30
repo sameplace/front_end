@@ -22,7 +22,8 @@ public static function Login($url, $data )
 
         $result = curl_exec( $ch );
         if($result=='"OK"'){
-            
+            session_start();
+            $_SESSION['logged'] = 1;
             curl_setopt( $ch, CURLOPT_HEADER, true );
             $result = curl_exec( $ch );
             curl_close( $ch );
@@ -38,8 +39,7 @@ public static function Login($url, $data )
             $final_cookie = explode('PHPSESSID=', $final_cookie[0]);
             $cookie = $final_cookie[1];
             setcookie('PHPSESSID', $cookie, time()+3600, '/');
-            session_start();
-            $_SESSION['logged'] = 1;
+
             
         } else {
             echo $result;
