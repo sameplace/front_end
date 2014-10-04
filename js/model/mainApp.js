@@ -56,7 +56,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				console.log(data);
-				$scope.dealspacesResult = angular.fromJson(data);
+				$scope.result = angular.fromJson(data);
 			});
 		};
 

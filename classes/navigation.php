@@ -9,8 +9,8 @@ public static function Nav()
 
 	$pages = array( 
 		1 => 'home.tpl',
-	 	2 => 'technology.tpl', 
-	 	3 => 'company.tpl', 
+	 	2 => 'dealspaces.tpl', 
+	 	3 => 'user.tpl', 
 	 	4 => 'news.tpl', 
 	 	5 => 'contact.tpl', 
 	 	6 => 'service.tpl',
@@ -23,7 +23,8 @@ public static function Nav()
 			if(isset($_SESSION['logged']) && $_SESSION['logged']==1 && array_key_exists($page, $pages)){
 				include "templates/".$pages[$page];
 			} else {
-				header("Location: index.php");
+				// include "templates/pls_login.tpl";
+				include "templates/".$pages[$page];
 			}
 		}
 	}

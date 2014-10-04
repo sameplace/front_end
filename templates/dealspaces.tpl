@@ -14,7 +14,7 @@
 			</thead>
 			<tbody>
 
-			<tr ng-repeat="dealspace in dealspacesResult">	
+			<tr ng-repeat="dealspace in result">	
 				<td>{{dealspace.oid}}</td>
 				<td>{{dealspace.owner}}</td>
 				<td>{{dealspace.cTime}}</td>
