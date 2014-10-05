@@ -60,6 +60,22 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			});
 		};
 
+		$scope.sendAndCatchData = function(file) {
+			$scope.postData = {'oid' : 'FOQHHCfz8'};
+
+			$http({
+			method  :'POST',
+			url:'libs/'+file+'.php',
+			data: $.param($scope.postData),
+			withCredentials: true,
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data, status, headers, config) {
+				console.log(data);
+				// $scope.result = angular.fromJson(data);
+			});
+		};
+
 		$scope.logout = function() {
 
 			$http({

@@ -199,7 +199,7 @@ footer #goTop:hover {color: #fff;background: #5cb85c;padding: 15px;font-size: 16
 .grayc { color: #6D6D6E; }
 /* home elements end*/
 
-#service {background-image: url('../images/html5.jpg'); background-size:100% 100%; background-attachment: fixed; color:#fff; margin-top: 80px; /* very important, change it together with header height */ min-height: 800px; }
+#service {background-image: url('../images/html5.jpg'); background-size:100% 100%; background-attachment: fixed; color:#fff; margin-top: 60px; /* very important, change it together with header height */ min-height: 800px; }
 #home_left {width: 50%; float: left; }
 #home_right {width: 50%; float: left; }
 #section2, #section4 {background: #1C1C1C; color: #fff;font-family: 'Dosis';}
@@ -334,11 +334,10 @@ table td {font-size:14px;}
   tr { border: 1px solid #ccc; }
   tr td {border: none;border-bottom: 1px solid #eee; position: relative;padding-left: 50%;}
   td:before {position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
-  td:nth-of-type(1):before { content: "First Name"; }
-  td:nth-of-type(2):before { content: "Last Name"; }
-  td:nth-of-type(3):before { content: "Job Title"; }
-  td:nth-of-type(4):before { content: "Favorite Color"; }
-  td:nth-of-type(5):before { content: "Wars of Trek?"; }
-  td:nth-of-type(6):before { content: "Name"; }
-  td:nth-of-type(7):before { content: "Date of Birth"; }
+  td:nth-of-type(1):before { content: "Oid"; }
+  td:nth-of-type(2):before { content: "Owner"; }
+  td:nth-of-type(3):before { content: "cTime"; }
+  td:nth-of-type(4):before { content: "mTime"; }
+  td:nth-of-type(5):before { content: "Name"; }
+  td:nth-of-type(6):before { content: "Type"; }
  
