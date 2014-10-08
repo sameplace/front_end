@@ -17,8 +17,10 @@
                
            <!--      <li><a href="#"></a></li>
                 <li><a href="#"></a></li> -->
-            <?php if(isset($_SESSION['logged']) && $_SESSION['logged']==1): ?>
-                <li><a ng-click="logout()" href="#">Log out</a></li>
+            <?php if(isset($_COOKIE['PHPSESSID'])): ?>
+                <!-- <li><a ng-click="logout()" href="#">Log out</a></li> -->
+                <li><a href="?page=2">Dealspaces</a></li>
+                <li><a href="?page=3">Profile</a></li>
                           </ul>
 
             <?php else: ?>
