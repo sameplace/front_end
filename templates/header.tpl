@@ -20,6 +20,7 @@
             <?php if(isset($_SESSION['logged']) && $_SESSION['logged']==1): ?>
                 <li><a ng-click="logout()" href="#">Log out</a></li>
                           </ul>
+
             <?php else: ?>
                 <li><a id="toggler" onclick="showme('widget', this.id);" href="#">Log in</a></li>
 
@@ -33,13 +34,28 @@
                 <div class="form-group">
                 <input type="password" placeholder="Password" class="form-control" id="password" name="password" ng-model="password" onblur="if (this.placeholder=='') this.placeholder='Password';" onfocus="if (this.placeholder=='Password') this.placeholder='';">
               </div>
-                <button type="submit" class="btn btn-success transition">Sign in</button>
+                <button type="submit" data-toggle="modal" data-target="#myModal" class="btn btn-success transition">Go</button>
               </form>
             <?php endif; ?>
 
          </div>
        </div><!--/.navbar-collapse -->
     {{message_submit}}
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          </div>
+                          <div class="modal-body">
+                            {{login_message}}
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
      </div>
   </div><!-- /.container-fluid -->
 </nav>

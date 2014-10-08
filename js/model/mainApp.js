@@ -42,7 +42,9 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				location.reload();
+
+				$scope.login_message = data;
+				// location.reload();
 			});
 		};
 

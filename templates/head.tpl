@@ -19,6 +19,7 @@
     <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/responsive-nav.js"></script>
+    <script src="js/jquery.flot.min.js"></script>
     <script src="js/angular/angular.min.js" type="text/javascript"></script>
     <script src="js/angular/angular-ui-bootstrap.js" type="text/javascript"></script>
     <script src="//code.angularjs.org/1.2.16/angular-cookies.min.js" type="text/javascript"></script>
@@ -67,6 +68,36 @@
 
             return res;
         }
+
+        var plot = $.plot("#placeholder", [ getRandomData() ], {
+                   series: {
+                       shadowSize: 0   // Drawing is faster without shadows
+                   },
+                   yaxis: {
+                       min: 0,
+                       max: 100
+                   },
+                   xaxis: {
+                       show: false
+                   }
+               });
+
+               function update() {
+
+                   plot.setData([getRandomData()]);
+
+                   // Since the axes don't change, we don't need to call plot.setupGrid()
+
+                   plot.draw();
+                   setTimeout(update, updateInterval);
+               }
+
+               update();
+
+               // Add the Flot version string to the footer
+
+               $("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
+
 
         // Set up the control widget
 

@@ -191,7 +191,7 @@
       }
     }
 
-  setTimeout(function(){  $('.aaa').addClass('pulse'); }, 1000);
+  // setTimeout(function(){  $('.aaa').addClass('pulse'); }, 1000);
 
 
 

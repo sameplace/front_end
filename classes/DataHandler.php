@@ -39,7 +39,7 @@ public static function Login($url, $data )
             $final_cookie = explode('PHPSESSID=', $final_cookie[0]);
             $cookie = $final_cookie[1];
             setcookie('PHPSESSID', $cookie, time()+3600, '/');
-
+            echo 'Success';
             
         } else {
             echo $result;
