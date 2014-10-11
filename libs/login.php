@@ -1,4 +1,5 @@
 <?php
+
 require "../config.php";
 
 	if(isset($_POST['email']) && isset($_POST['pass'])){

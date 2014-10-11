@@ -3,7 +3,7 @@
 class DataHandler
 {
 
-public static function Login($url, $data )
+public static function Login($url, $data)
 {
         $ch =  curl_init();
 
@@ -22,11 +22,13 @@ public static function Login($url, $data )
 
         $result = curl_exec( $ch );
         if($result=='"OK"'){
-            // session_start();
-            // $_SESSION['logged'] = 1;
             curl_setopt( $ch, CURLOPT_HEADER, true );
             $result = curl_exec( $ch );
             curl_close( $ch );
+
+            session_name('log');
+            session_start();
+            $_SESSION['logged'] = 1;
 
             $cookies = array();
             preg_match_all('/Set-Cookie:(?<cookie>\s{0,}.*)$/im', $result, $cookies);
@@ -46,8 +48,6 @@ public static function Login($url, $data )
             curl_close( $ch );
         }
 
-        return $result;
-	
 }
 
 public static function fetchData($url)

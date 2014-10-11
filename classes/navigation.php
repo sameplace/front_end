@@ -4,8 +4,7 @@ class Navigation
 {
 
 //function looks for get variable 'page', and includes needed page according to page
-public static function Nav()
-{
+public static function Nav(){
 
 	$pages = array( 
 		1 => 'home.tpl',
@@ -24,7 +23,7 @@ public static function Nav()
 				include "templates/".$pages[$page];
 			} else {
 				// include "templates/pls_login.tpl";
-				include "templates/".$pages[$page];
+				include "templates/pls_login.tpl";
 			}
 		}
 	}
@@ -32,8 +31,7 @@ public static function Nav()
 }
 
 //function checks if variable page is numeric
-public static function Secure()
-{
+public static function Secure(){
 	if(isset($_GET['page'])){
 		$page = $_GET['page'];
 		if(!is_numeric($page) && $page!=null)
