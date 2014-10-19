@@ -43,7 +43,9 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.login_message = data;
-				// location.reload();
+				if(data=="Success"){
+					setTimeout(function(){location.reload();}, 3000);
+				}
 			});
 		};
 
@@ -56,24 +58,25 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				console.log(data);
+				// console.log(data);
 				$scope.result = angular.fromJson(data);
+				document.getElementById('back_button').style.visibility = "hidden";
 			});
 		};
 
-		$scope.sendAndCatchData = function(file) {
-			$scope.postData = {'oid' : 'FOQHHCfz8'};
-
+		$scope.sendAndCatchData = function(file, oid) {
+			$scope.oid = {'oid' : oid};
 			$http({
 			method  :'POST',
 			url:'libs/'+file+'.php',
-			data: $.param($scope.postData),
+			data: $.param($scope.oid),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				console.log(data);
-				// $scope.result = angular.fromJson(data);
+				$scope.result = angular.fromJson(data);
+				document.getElementById('back_button').style.visibility = "visible";
+
 			});
 		};
 

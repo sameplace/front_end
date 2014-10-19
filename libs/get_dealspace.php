@@ -1,4 +1,8 @@
 <?php
+
 require "../config.php";
-DataHandler::sendAndFetchData('https://secure.bitway.com/sp/jgd.php');
+
+	$data = array('oid' => $_POST['oid']);
+	DataHandler::sendAndFetchData('https://secure.bitway.com/sp/jgd.php', $data);
+
 ?>

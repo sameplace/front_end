@@ -197,6 +197,7 @@ footer #goTop:hover {color: #fff;background: #5cb85c;padding: 15px;font-size: 16
 #big_h_elem {text-align: left; font-size: 46px; font-family: 'Dosis';}
 .svm { font-size: 70px; margin-top: 80px; text-align: right; font-family: 'Dosis', sans-serif; }
 .grayc { color: #6D6D6E; }
+.backButton {visibility: hidden;}
 /* home elements end*/
 
 #service {background-image: url('../images/html5.jpg'); background-size:100% 100%; background-attachment: fixed; color:#fff; margin-top: 60px; /* very important, change it together with header height */ min-height: 800px; }
