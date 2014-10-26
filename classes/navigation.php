@@ -11,7 +11,7 @@ public static function Nav(){
 	 	2 => 'dealspaces.tpl', 
 	 	3 => 'user.tpl', 
 	 	4 => 'single_dealspace.tpl', 
-	 	5 => 'contact.tpl', 
+	 	5 => 'mime.tpl', 
 	 	6 => 'service.tpl',
 	 	7 => 'register.tpl');
 

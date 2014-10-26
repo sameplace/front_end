@@ -44,13 +44,25 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			}).success(function(data, status, headers, config) {
 				$scope.login_message = data;
 				if(data=="Success"){
+					$scope.message_class = 'alert alert-success';
 					setTimeout(function(){location.reload();}, 3000);
+				}
+				else {
+					$scope.message_class = 'alert alert-danger';
 				}
 			});
 		};
 
-		$scope.catchData = function(file) {
+		function whirlyOn() {
+			angular.element(".whirly").css('display','block');
+		}
 
+		function whirlyOff() {
+			angular.element(".whirly").fadeOut('slow');
+		}
+
+		$scope.catchData = function(file) {
+			whirlyOn();
 			$http({
 			method  :'GET',
 			url:'libs/'+file+'.php',
@@ -60,11 +72,17 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			}).success(function(data, status, headers, config) {
 				// console.log(data);
 				$scope.result = angular.fromJson(data);
-				document.getElementById('back_button').style.visibility = "hidden";
+				whirlyOff();
 			});
 		};
 
+		$scope.backDealspaces = function() {
+			angular.element('#service').css('display', 'block');
+			angular.element('.singleDealspace').css('display', 'none');
+		}
+
 		$scope.sendAndCatchData = function(file, oid) {
+			whirlyOn();
 			$scope.oid = {'oid' : oid};
 			$http({
 			method  :'POST',
@@ -74,9 +92,11 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				$scope.result = angular.fromJson(data);
-				document.getElementById('back_button').style.visibility = "visible";
-
+				console.log(data);
+				$scope.single_dealspace = angular.fromJson(data);
+				angular.element('#service').css('display', 'none');
+				angular.element('.singleDealspace').css('display', 'block');
+				whirlyOff();
 			});
 		};
 
