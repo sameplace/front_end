@@ -1,13 +1,14 @@
 <!-- DEALSPACES -->
 <section id="service" class="service" ngController="mainController" data-ng-init="catchData('get_data')">
 	<div class="container">
+		<input type="text" class="searchInput" ng-model="search">
 		<h1>Dealspaces</h1>
 		<div class="filterWrap clearfix">
 			<div class="whirly"></div>
-			<div class="filterBlock col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="dealspace in result">
+			<div class="filterBlock col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="dealspace in result | filter:search">
 				<div class="filter" ng-click="sendAndCatchData('get_dealspace', dealspace.oid)">
-					<div class="filterTitle lightGrayBorder clearfix">
-						<h2 class="lightGrayBg">{{dealspace.name}}</h2>
+					<div class="filterTitle lightGrayBorder clearfix" style="border-color: {{dealspace.color}};">
+						<h2 class="lightGrayBg"  style="background:{{dealspace.color}};">{{dealspace.name}}</h2>
 					</div>
 					<div class="filterData">
 						<h3><i class="fa fa-user"></i>{{dealspace.owner}}</h3>

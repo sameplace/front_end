@@ -61,6 +61,12 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			angular.element(".whirly").fadeOut('slow');
 		}
 
+		function randomColor() {
+			var colors = ['#E87A1C', '#D7D67F', '#EF799D' , '#976BE4', '#09CFCF', '#C84D4D', '#F0EF69', '#CD3E3E'];
+			var random = Math.floor((Math.random()*colors.length));
+			return colors[random];
+		}
+
 		$scope.catchData = function(file) {
 			whirlyOn();
 			$http({
@@ -70,8 +76,12 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				// console.log(data);
 				$scope.result = angular.fromJson(data);
+				angular.forEach($scope.result, function(value) {
+					value['color'] = randomColor();
+				});
+				console.log($scope.result);
+
 				whirlyOff();
 			});
 		};

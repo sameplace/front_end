@@ -440,6 +440,7 @@ table td {font-size:14px;}
 .backButton button.btn-primary:active {background: #C24111}
 .singleDealspace {display: none;}
 .filterData p.ng-binding {overflow: hidden;}
+.searchInput {color:#000; float: right;}
 /* Technology page END */
 
 @media (max-width: 767px) {
