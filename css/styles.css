@@ -412,7 +412,7 @@ table td {font-size:14px;}
 .dealTable .ng-binding:hover {outline: #fff;background-color: #4d4d4d;box-shadow: inset 0px 0px 6px #BBB6B6;}
 .dealTable .ng-binding:active, .ng-binding:focus {background-color: #767676;box-shadow: inset 0px 0px 6px #FFFFFF;}
 .dealTable + .backButton > button.btn-primary:focus, .dealTable + button.btn-primary:active {outline: none;border:none;box-shadow: none;background: #AD4017;}
-.filterBlock, .dealspaceBlock {padding: 0px;transition:all ease 0.25s;-webkit-transition:all ease 0.25s;-moz-transition:all ease 0.25s;-o-transition:all ease 0.25s;}
+.filterBlock, .dealspaceBlock {padding: 0px;transition:all ease 0.25s;-webkit-transition:all ease 0.25s;-moz-transition:all ease 0.25s;-o-transition:all ease 0.25s;font-family: "Dosis";}
 .filterTitle {border-bottom: 8px solid transparent;border-radius: 0px 2px 2px 2px;margin:10px;}
 .filterData, .dealspaceBlock p {background: rgb(168, 208, 215);border: 1px solid rgb(146, 181, 187);box-shadow: 0px 0px 3px rgb(137, 174, 181);margin: 10px;padding: 8px;color: #fff;}
 .dealspaceBlock {text-align: center;}
@@ -427,7 +427,7 @@ table td {font-size:14px;}
 .aquamarineBorder {border-color: #0FA8A2;}
 .maroonBg {background-color: #CF3B46;}
 .maroonBorder {border-color: #CF3B46;}
-.filterTitle h2 {display: block;float: left;border-radius: 2px 2px 0 0;padding: 8px 8px 0 8px;color: #fff;line-height: 26px;}
+.filterTitle h2 {display: block;float: left;border-radius: 2px 2px 0 0;padding: 8px 8px 0 8px;color: #fff;line-height: 26px;font-family: "Dosis";}
 .filterData h3 {color: #fff;font-size: 16px;line-height: 25px;background:transparent;}
 .filterData p:hover {background:0px 0px 3px rgb(137, 174, 181);}
 .filterData h3 i {margin-right: 5px;border: 1px solid #fff;padding: 5px;border-radius: 20px;font-size: 12px;}
@@ -439,8 +439,17 @@ table td {font-size:14px;}
 .backButton button.btn-primary:focus, .backButton button.btn-primary:active {outline: none;background: #e74e15;}
 .backButton button.btn-primary:active {background: #C24111}
 .singleDealspace {display: none;}
-.filterData p.ng-binding {overflow: hidden;}
-.searchInput {color:#000; float: right;}
+.filterData p.ng-binding {overflow: hidden;font-family: "Dosis";}
+.searchInput {color:#000; float: right;margin-right: -5px;border:1px solid transparent;height: 36px;line-height: 18px;padding-left: 10px;transition: all ease .25s;-webkit-transition: all ease .25s;-moz-transition:all ease .25s;-o-transition:all ease .25s;box-shadow: 1px 1px 1px transparent;font-family: "Dosis";font-size: 14px;}
+.searchInput[placeholder] {font-style:italic;}
+.searchInput:active, .searchInput:focus {outline: none;box-shadow: 1px 1px 1px #9B9B9B;border-color: #5A5A5A;}
+.message {background-color: rgba(255,255,255,.9);padding: 15px;box-shadow: 2px 2px 3px #EDBDAB;margin-bottom: 30px;border: 1px solid #F4C9B9;}
+.messageHeader {margin: 0 15px;border-bottom: 1px solid #ccc;}
+.messageFrom a, .messageCreated {font-size: 12px;color: #ccc;}
+.messageFrom, .messageContent {text-align: left;}
+.messageCreated {text-align: right;font-style: italic;}
+.messageContent {color: #ccc;font-size: 16px;margin-top: 10px;}
+.message h1 {margin: 15px 0;color: #E47850;padding: 0;font-size: 26px;}
 /* Technology page END */
 
 @media (max-width: 767px) {

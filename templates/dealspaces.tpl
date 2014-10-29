@@ -1,20 +1,28 @@
 <!-- DEALSPACES -->
 <section id="service" class="service" ngController="mainController" data-ng-init="catchData('get_data')">
 	<div class="container">
-		<input type="text" class="searchInput" ng-model="search">
-		<h1>Dealspaces</h1>
+		<div class="row">
+			<div class="col-xs-6 col-xs-push-3">
+				<h1>Dealspaces</h1>
+			</div>
+			<div class="col-xs-3 pull-right">
+				<input type="text" class="searchInput" ng-model="search" placeholder="Search...">
+			</div>
+		</div>
 		<div class="filterWrap clearfix">
-			<div class="whirly"></div>
-			<div class="filterBlock col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="dealspace in result | filter:search">
-				<div class="filter" ng-click="sendAndCatchData('get_dealspace', dealspace.oid)">
-					<div class="filterTitle lightGrayBorder clearfix" style="border-color: {{dealspace.color}};">
-						<h2 class="lightGrayBg"  style="background:{{dealspace.color}};">{{dealspace.name}}</h2>
-					</div>
-					<div class="filterData">
-						<h3><i class="fa fa-user"></i>{{dealspace.owner}}</h3>
-						<p>Created: {{dealspace.cTime}}</p>
-						<p>Modified: {{dealspace.mTime}}</p>
-						<p>Type: {{dealspace.type}}</p>
+			<div class="row">
+				<div class="whirly"></div>
+				<div class="filterBlock col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="dealspace in result | filter:search">
+					<div class="filter" ng-click="sendAndCatchData('get_dealspace', dealspace.oid)">
+						<div class="filterTitle lightGrayBorder clearfix" style="border-color: {{dealspace.color}};">
+							<h2 class="lightGrayBg"  style="background:{{dealspace.color}};">{{dealspace.name}}</h2>
+						</div>
+						<div class="filterData">
+							<h3><i class="fa fa-user"></i>{{dealspace.owner}}</h3>
+							<p>Created: {{dealspace.cTime}}</p>
+							<p>Modified: {{dealspace.mTime}}</p>
+							<p>Type: {{dealspace.type}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -28,29 +36,24 @@
 		<div class="container">
 			<div class="clearfix">
 				<div class="col-xs-12" ng-repeat="dealspace in single_dealspace">
-						<h1>{{dealspace.FromAddr}}</h1>
-						<div class="dealspaceBlocks">
-							<div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
-								<p>Time when this dealspace was created:</p>
-								<p>{{dealspace.cTime}}</p>
+					<div class="message clearfix">
+						<div class="row">
+							<div class="messageHeader clearfix">
+								<div class="row">
+									<div class="col-xs-6 messageFrom">
+										<a href="mailto:{{dealspace.FromAddr}}">{{dealspace.FromAddr}}</a>
+									</div>
+									<div class="col-xs-6 messageCreated">
+										{{dealspace.cTime}}
+									</div>
+								</div>
 							</div>
-							<div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
-								<p>Time when this dealspace was modified:</p>
-								<p>{{dealspace.mTime}}</p>
+							<h1>Subject</h1>
+							<div class="col-xs-12 messageContent">
+								{{dealspace.Content}}
 							</div>
-							<!-- <div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
-								<p>Type of this dealspace:</p>
-								<p>{{dealspace.type}}</p>
-							</div> -->
-							<div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
-								<p>Date:</p>
-								<p>{{dealspace.Date}}</p>
-							</div>
-							<p>{{dealspace.Content}}</p>
-							<p>{{dealspace.FromAddr}}</p>
-							<p>{{dealspace.InReplyTo}}</p>
-							<p>{{dealspace.References}}</p>
 						</div>
+					</div>
 				</div>
 			</div>
 			<div class="backButton" id="back_button" ng-click="backDealspaces()"><button class="btn btn-primary" type="button">Back</button></div>
