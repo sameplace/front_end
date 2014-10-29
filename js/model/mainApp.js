@@ -62,7 +62,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 		}
 
 		function randomColor() {
-			var colors = ['#E87A1C', '#D7D67F', '#EF799D' , '#976BE4', '#09CFCF', '#C84D4D', '#F0EF69', '#CD3E3E'];
+			var colors = ['#E87A1C', '#D7D67F', '#EF799D' , '#976BE4', '#09CFCF', '#C84D4D', '#CD3E3E'];
 			var random = Math.floor((Math.random()*colors.length));
 			return colors[random];
 		}
@@ -80,7 +80,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				angular.forEach($scope.result, function(value) {
 					value['color'] = randomColor();
 				});
-				console.log($scope.result);
 
 				whirlyOff();
 			});

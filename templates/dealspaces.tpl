@@ -12,11 +12,9 @@
 					</div>
 					<div class="filterData">
 						<h3><i class="fa fa-user"></i>{{dealspace.owner}}</h3>
-						<p>{{dealspace.oid}}</p>
-						<p>{{dealspace.cTime}}</p>
-						<p>{{dealspace.mTime}}</p>
-						<p>{{dealspace.name}}</p>
-						<p>{{dealspace.type}}</p>
+						<p>Created: {{dealspace.cTime}}</p>
+						<p>Modified: {{dealspace.mTime}}</p>
+						<p>Type: {{dealspace.type}}</p>
 					</div>
 				</div>
 			</div>
@@ -30,7 +28,7 @@
 		<div class="container">
 			<div class="clearfix">
 				<div class="col-xs-12" ng-repeat="dealspace in single_dealspace">
-						<h1>{{dealspace.owner}}</h1>
+						<h1>{{dealspace.FromAddr}}</h1>
 						<div class="dealspaceBlocks">
 							<div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
 								<p>Time when this dealspace was created:</p>
@@ -40,16 +38,15 @@
 								<p>Time when this dealspace was modified:</p>
 								<p>{{dealspace.mTime}}</p>
 							</div>
-							<div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
+							<!-- <div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
 								<p>Type of this dealspace:</p>
 								<p>{{dealspace.type}}</p>
-							</div>
+							</div> -->
 							<div class="dealspaceBlock col-xs-12 col-sm-6 col-lg-4">
 								<p>Date:</p>
 								<p>{{dealspace.Date}}</p>
 							</div>
-							<p>{{dealspace.oid}}</p>
-							<p>{{dealspace.MessageId}}</p>
+							<p>{{dealspace.Content}}</p>
 							<p>{{dealspace.FromAddr}}</p>
 							<p>{{dealspace.InReplyTo}}</p>
 							<p>{{dealspace.References}}</p>
