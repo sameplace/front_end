@@ -35,8 +35,8 @@
 	<section class="service">
 		<div class="container">
 			<div class="clearfix">
-				<div class="col-xs-12" ng-repeat="dealspace in single_dealspace">
-					<div class="message clearfix">
+				<div class="col-xs-12">
+					<div class="message clearfix" ng-repeat="dealspace in single_dealspace">
 						<div class="row">
 							<div class="messageHeader clearfix">
 								<div class="row">
@@ -51,6 +51,10 @@
 							<h1>Subject</h1>
 							<div class="col-xs-12 messageContent">
 								{{dealspace.Content}}
+							</div>
+							<button ng-click="sendAndCatchDataMime('get_mime', dealspace.oid)">Show</button>
+							<div ng-if="check_oid == dealspace.oid">
+								<p>{{attachmentContent}}</p>
 							</div>
 						</div>
 					</div>

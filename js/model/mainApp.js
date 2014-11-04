@@ -69,7 +69,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 
 		$scope.catchData = function(file) {
 			whirlyOn();
-			$http({
+			$http({ 
 			method  :'GET',
 			url:'libs/'+file+'.php',
 			data: $.param($scope.formData),
@@ -101,11 +101,53 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				console.log(data);
+				// console.log(data);
+
 				$scope.single_dealspace = angular.fromJson(data);
 				angular.element('#service').css('display', 'none');
 				angular.element('.singleDealspace').css('display', 'block');
 				whirlyOff();
+			});
+		};
+
+		$scope.sendAndCatchDataMime = function(file, oid) {
+			whirlyOn();
+			$scope.dealspace_oid = oid;
+			$scope.oid = {'oid' : oid};
+			$http({
+			method  :'POST',
+			url:'libs/'+file+'.php',
+			data: $.param($scope.oid),
+			withCredentials: true,
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data, status, headers, config) {
+				$scope.mime = angular.fromJson(data);
+				console.log($scope.mime);
+				$scope.check_oid = $scope.mime[0].oid;
+				$scope.mime = $scope.mime[1];
+					if(angular.isDefined($scope.mime)){
+						sendAndCatchDataAttachment('get_attachment', $scope.mime.oid);
+					} else { 
+						$scope.attachmentContent = '';
+					}
+			});
+		};
+
+		var sendAndCatchDataAttachment = function(file, oid) {
+			whirlyOn();
+			$scope.dealspace_oid = oid;
+			$scope.oid = {'oid' : oid};
+			$http({
+			method  :'POST',
+			url:'libs/'+file+'.php',
+			data: $.param($scope.oid),
+			withCredentials: true,
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data, status, headers, config) {
+				console.log(data);
+				$scope.attachmentContent = data;
 			});
 		};
 
