@@ -1,29 +1,29 @@
-<section id="service" ngController="mainController" data-ng-init="catchData('get_user')">
-	<div class="container">
-		<h1>User</h1>
-		<table>
-			<thead>
-			<tr>				
-				<th>Oid</th>
-				<th>Type</th>
-				<th>Owner</th>
-				<th>cTime</th>
-				<th>mTime</th>
-				<th>Real name</th>
-				<th>Email</th>
-				<th>Question</th>
-			</tr>
-			</thead>
-			<tbody>
-				<td>{{result.oid}}</td>
-				<td>{{result.type}}</td>
-				<td>{{result.owner}}</td>
-				<td>{{result.cTime}}</td>
-				<td>{{result.mTime}}</td>
-				<td>{{result.realname}}</td>
-				<td>{{result.email}}</td>
-				<td>{{result.question}}</td>
-			</tbody>
-		</table>
+	<section class="service" ngController="mainController" data-ng-init="catchDataUser('get_user')">
+	<div class="whirly"></div>
+	<div class="userPage">
+		<div class="container">
+			<div class="clearfix">
+				<div class="col-xs-12">
+					<div class="message clearfix">
+						<div class="row">
+							<div class="messageHeader clearfix">
+								<div class="row">
+									<div class="col-xs-6 messageFrom">
+										<a href="mailto:{{result.FromAddr}}">{{result.email}}</a>
+									</div>
+									<div class="col-xs-6 messageCreated">
+										{{result.cTime}}
+									</div>
+								</div>
+							</div>
+							<h1>{{result.realname}}</h1>
+							<div class="col-xs-12 messageContent">
+								Type: {{result.type}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</section>
+	</section>

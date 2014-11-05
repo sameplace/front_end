@@ -21,12 +21,10 @@
                 <li><a ng-click="logout()" href="#">Log out</a></li>
                 <li><a href="?page=2">Dealspaces</a></li>
                 <li><a href="?page=3">Profile</a></li>
-                          </ul>
-
+              </ul>
             <?php else: ?>
                 <li><a id="toggler" onclick="showme('widget', this.id);" href="#">Log in</a></li>
-
-                          </ul>
+              </ul>
 
             
              <form id="widget" ng-submit="processLogin()">

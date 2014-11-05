@@ -52,9 +52,11 @@
 							<div class="col-xs-12 messageContent">
 								{{dealspace.Content}}
 							</div>
-							<button ng-click="sendAndCatchDataMime('get_mime', dealspace.oid)">Show</button>
+							<a class="col-xs-12 messageContent threeDots" href="" ng-click="sendAndCatchDataMime('get_mime', dealspace.oid)">...</a>
 							<div ng-if="check_oid == dealspace.oid">
-								<p>{{attachmentContent}}</p>
+								<h3>Attachment</h3>
+								
+								<p class="col-xs-12 messageContent">{{attachmentContent}}</p>
 							</div>
 						</div>
 					</div>

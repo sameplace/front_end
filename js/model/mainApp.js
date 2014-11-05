@@ -85,6 +85,21 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			});
 		};
 
+		$scope.catchDataUser = function(file) {
+			whirlyOn();
+			$http({ 
+			method  :'GET',
+			url:'libs/'+file+'.php',
+			data: $.param($scope.formData),
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data, status, headers, config) {
+				$scope.result = angular.fromJson(data);
+				whirlyOff();
+				angular.element('.userPage').css('display', 'block');
+			});
+		};
+
 		$scope.backDealspaces = function() {
 			angular.element('#service').css('display', 'block');
 			angular.element('.singleDealspace').css('display', 'none');
@@ -101,8 +116,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				// console.log(data);
-
 				$scope.single_dealspace = angular.fromJson(data);
 				angular.element('#service').css('display', 'none');
 				angular.element('.singleDealspace').css('display', 'block');
@@ -123,7 +136,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.mime = angular.fromJson(data);
-				console.log($scope.mime);
 				$scope.check_oid = $scope.mime[0].oid;
 				$scope.mime = $scope.mime[1];
 					if(angular.isDefined($scope.mime)){
@@ -146,7 +158,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				console.log(data);
 				$scope.attachmentContent = data;
 			});
 		};

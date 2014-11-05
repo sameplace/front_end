@@ -72,3 +72,6 @@
     </div>
   </div>
 </section>
+<script>
+  homePage = true;
+</script>

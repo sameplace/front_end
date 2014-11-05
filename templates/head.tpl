@@ -30,6 +30,7 @@
     
     <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <script>
+    var homePage;
     $(function() {
 
         // We use an inline data source in the example, usually data would
@@ -69,7 +70,8 @@
             return res;
         }
 
-        var plot = $.plot("#placeholder", [ getRandomData() ], {
+        if(homePage){
+          var plot = $.plot("#placeholder", [ getRandomData() ], {
                    series: {
                        shadowSize: 0   // Drawing is faster without shadows
                    },
@@ -98,7 +100,7 @@
 
                $("#footer").prepend("Flot " + $.plot.version + " &ndash; ");
 
-
+        }
         // Set up the control widget
 
         var updateInterval = 30;
