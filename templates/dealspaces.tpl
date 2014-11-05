@@ -18,7 +18,7 @@
 							<h2 class="lightGrayBg"  style="background:{{dealspace.color}};">{{dealspace.name}}</h2>
 						</div>
 						<div class="filterData">
-							<h3><i class="fa fa-user"></i>{{dealspace.owner}}</h3>
+							<!-- <h3><i class="fa fa-user"></i>{{dealspace.owner}}</h3> -->
 							<p>Created: {{dealspace.cTime}}</p>
 							<p>Modified: {{dealspace.mTime}}</p>
 							<p>Type: {{dealspace.type}}</p>
@@ -54,8 +54,7 @@
 							</div>
 							<a class="col-xs-12 messageContent threeDots" href="" ng-click="sendAndCatchDataMime('get_mime', dealspace.oid)">...</a>
 							<div ng-if="check_oid == dealspace.oid">
-								<h3>Attachment</h3>
-								
+								<h1>Attachment</h1>
 								<p class="col-xs-12 messageContent">{{attachmentContent}}</p>
 							</div>
 						</div>
