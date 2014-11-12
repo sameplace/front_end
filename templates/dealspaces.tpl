@@ -36,6 +36,7 @@
 		<div class="container">
 			<div class="clearfix">
 				<div class="col-xs-12">
+				<div ng-if="single_dealspace.length < 1"><h1>This dealspace is empty</h1></div>
 					<div class="message clearfix" ng-repeat="dealspace in single_dealspace">
 						<div class="row">
 							<div class="messageHeader clearfix">

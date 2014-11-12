@@ -19,7 +19,7 @@ public static function Nav(){
 		
 		$page = $_GET['page'];
 		if($page!=1){
-			if(isset($_SESSION['logged']) && $_SESSION['logged']==1 && array_key_exists($page, $pages)){
+			if(isset($_COOKIE['PHPSESSID']) && isset($_SESSION['logged']) && $_SESSION['logged']==1 && array_key_exists($page, $pages)){
 				include "templates/".$pages[$page];
 			} else {
 				// include "templates/pls_login.tpl";
