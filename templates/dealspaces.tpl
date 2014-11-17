@@ -42,17 +42,17 @@
 								<h1>{{ dealspace_name }}</h1>
 								<button class="change" ng-click="getInput()"><i class="fa fa-cog fa-lg"></i></button>
 							</div>
-							<div ng-if="participants">
-							<div ng-repeat="part in participants">
-								<a href="">{{part.Addr}}</a>
-							</div>
-							</div>
 							<div class="animate-switch" ng-switch-when="change"><input type="text" id="new_name" value="{{dealspace_name}}">
 								<button class="btn btn-primary" ng-click="renameDealspace('rename_dealspace', dealspace_id)">Rename</button>
 							</div>
 						</div>
 						<div class="col-xs-3 pull-right">
 						 	<input type="text" class="searchInput" ng-model="search" placeholder="Search...">
+						</div>
+						<div ng-if="participants" class="col-xs-12 participants">
+							<p ng-repeat="part in participants">
+								<a href="">{{part.Addr}}</a>
+							</p>
 						</div>
 						<div class="col-xs-12" ng-if="single_dealspace.length < 1"><h1>This dealspace is empty</h1></div>
 						<div class="message clearfix col-xs-12" ng-repeat="dealspace in single_dealspace  | filter:search">
@@ -69,13 +69,12 @@
 								</div>
 								<h1>{{dealspace.Subject}}</h1>
 								<div class="col-xs-12 messageContent">
-								
-
 									{{dealspace.Content}}
 								</div>
 								<a class="col-xs-12 messageContent threeDots" href="" ng-click="sendAndCatchDataMime('get_mime', dealspace.oid)">...</a>
 								<div ng-if="check_oid == dealspace.oid">
 									<h1>Attachment</h1>
+									<img id="target" ng-src="data:image/JPG;base64,{{imagebase}}" />
 									<p class="col-xs-12 messageContent">{{attachmentContent}}</p>
 								</div>
 							</div>

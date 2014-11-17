@@ -123,6 +123,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 		$scope.backDealspaces = function() {
 			angular.element('#service').css('display', 'block');
 			angular.element('.singleDealspace').css('display', 'none');
+			$scope.selection = 'default';
 		}
 
 		//get dealspace
@@ -198,6 +199,23 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			});
 		};
 
+		//change password
+		$scope.changePassword = function(file, oid) {
+			var old_pass = document.getElementById('old_pass');
+			var new_pass = document.getElementById('new_pass');
+			$scope.post_data = {'oid' : oid, 'old_pass' : old_pass, 'new_pass' : new_pass};
+			$http({
+			method  :'POST',
+			url:'libs/'+file+'.php',
+			data: $.param($scope.post_data),
+			withCredentials: true,
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data) {
+				console.log(data);
+			});
+		};
+
 		//get mime
 		$scope.sendAndCatchDataMime = function(file, oid) {
 			whirlyOn();
@@ -222,7 +240,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 						} else {
 							$scope.imageAttach = false;
 						}
-						sendAndCatchDataAttachment('data', oid);
+						sendAndCatchDataAttachment('get_attachment', $scope.mime.oid);
 
 					} else { 
 						$scope.attachmentContent = '';
@@ -238,14 +256,19 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			$http({
 			method  :'POST',
 			url:'libs/'+file+'.php',
+			dataType:'image/gif',
 			data: $.param($scope.oid),
 			withCredentials: true,
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
-				$scope.attachmentContent = data;
+				// $scope.attachmentContent = data;
+				$scope.imagebase = data;
+				// $("#target").attr("src", data);
+				console.log(data);
 			});
 		};
+
 
 		$scope.logout = function() {
 
