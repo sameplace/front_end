@@ -1,4 +1,4 @@
-angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope', '$http', '$cookies', function($scope, $http, $cookies) {
+angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope', '$http', '$cookies', '$element', function($scope, $http, $cookies, $element) {
 	//function processForm takes text inputs from profile area, and send all information to php file, for now it responds in message_box div
 	$scope.formData = {};
 		$scope.processForm = function() {
@@ -27,6 +27,21 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			});
 		};
 
+		function showme(id, linkid) {
+                    var divid = document.getElementById(id);
+                    var toggleLink = document.getElementById(linkid);
+                    if (divid.style.visibility == 'visible') {
+                        toggleLink.innerHTML = 'Log in';
+                        divid.style.visibility = 'hidden';
+                        divid.style.opacity = '0';
+                    }
+                    else {
+                        toggleLink.innerHTML = 'Close';
+                        divid.style.visibility = 'visible';
+                        divid.style.opacity = '1';
+                    }
+                }
+
 		//function processSubmit takes text inputs from login, and send all information to php file on web server, returning message, if user is logged in, or not
 		$scope.formSubmitData = {};
 		$scope.processLogin = function() {
@@ -35,7 +50,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 
 			$http({
 			method  :'POST',
-			// url:'https://secure.bitway.com/sp/a428.php',
 			url:'libs/login.php',
 			data: $.param($scope.formData),
 			withCredentials: true,
@@ -45,7 +59,12 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.login_message = data;
 				if(data=="Success"){
 					$scope.message_class = 'alert alert-success';
-					setTimeout(function(){location.reload();}, 3000);
+					var ulElement = $element.find('.list-inline');
+					showme('widget', 'toggler');
+					$element.find('#toggler').remove();
+					ulElement.append('<li><a ng-click="logout()" href="#">Log out</a></li><li><a href="?page=2">Dealspaces</a></li><li><a href="?page=3">Profile</a></li></ul>');
+
+					// setTimeout(function(){location.reload();}, 3000);
 				}
 				else {
 					$scope.message_class = 'alert alert-danger';
@@ -67,6 +86,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			return colors[random];
 		}
 
+		//get all deaspaces
 		$scope.catchData = function(file) {
 			whirlyOn();
 			$http({ 
@@ -105,8 +125,26 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			angular.element('.singleDealspace').css('display', 'none');
 		}
 
-		$scope.sendAndCatchData = function(file, oid) {
+		//get dealspace
+		$scope.sendAndCatchData = function(file, oid, name, parts) {
 			whirlyOn();
+			$scope.parties = parts;
+			$scope.selected_dealspace_oid = oid;
+
+			//get participants
+				var final_participants = '';
+				var counter = 0;
+				angular.forEach($scope.parties, function(value) {
+					if(counter==0){
+						final_participants = value;
+					} else {
+						final_participants = final_participants + ',' + value;
+					}
+					counter++;
+					
+				});
+				sendAndCatchDataParticipants('get_participants', $scope.selected_dealspace_oid, final_participants);
+				
 			$scope.oid = {'oid' : oid};
 			$http({
 			method  :'POST',
@@ -117,12 +155,50 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.single_dealspace = angular.fromJson(data);
+				$scope.dealspace_name = name;
+				$scope.dealspace_id = oid;
 				angular.element('#service').css('display', 'none');
 				angular.element('.singleDealspace').css('display', 'block');
 				whirlyOff();
+
+
 			});
 		};
 
+		//get participants
+		var sendAndCatchDataParticipants = function(file, oid, p) {
+			whirlyOn();
+			$scope.oid = {'oid' : oid, 'participants' : p};
+			$http({
+			method  :'POST',
+			url:'libs/'+file+'.php',
+			data: $.param($scope.oid),
+			withCredentials: true,
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data, status, headers, config) {
+				$scope.participants = angular.fromJson(data);
+			});
+		};
+
+		//rename dealspace
+		$scope.renameDealspace = function(file, oid) {
+			var input = document.getElementById('new_name');
+			var rename = input.value;
+			$scope.oid = {'oid' : oid, 'rename' : rename};
+			$http({
+			method  :'POST',
+			url:'libs/'+file+'.php',
+			data: $.param($scope.oid),
+			withCredentials: true,
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data) {
+				$scope.selection = 'default';
+			});
+		};
+
+		//get mime
 		$scope.sendAndCatchDataMime = function(file, oid) {
 			whirlyOn();
 			$scope.dealspace_oid = oid;
@@ -139,13 +215,22 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 				$scope.check_oid = $scope.mime[0].oid;
 				$scope.mime = $scope.mime[1];
 					if(angular.isDefined($scope.mime)){
-						sendAndCatchDataAttachment('get_attachment', $scope.mime.oid);
+						var type = $scope.mime.MimeType;
+						//condition if attachment is an image TODO yet
+						if(type.substring(0, 5)=='image'){
+							$scope.imageAttach = true;
+						} else {
+							$scope.imageAttach = false;
+						}
+						sendAndCatchDataAttachment('data', oid);
+
 					} else { 
 						$scope.attachmentContent = '';
 					}
 			});
 		};
 
+		//get attachment
 		var sendAndCatchDataAttachment = function(file, oid) {
 			whirlyOn();
 			$scope.dealspace_oid = oid;
@@ -185,23 +270,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			});
 		};
 
-	//function ChangeColor changes the color of active tab, and stays that way until another tab is clicked.
-	$scope.tabs = [];
-		$scope.ChangeColor = function(nr) {
-			$scope.tabs = [];
-			$scope.tabs[nr] = '#FAAC58';
-
-		}
-
-	//content for tabs (on click)
-		var path = "templates/";
-
-		$scope.documentsTab = path + "documents.tpl";
-		$scope.peopleTab = path + "people.tpl";
-		$scope.emailTab = path + "email.tpl";
-
-		if($scope.tab==null)
-			$scope.tab = $scope.documentsTab;
-
-		$scope.tabs[0] = '#FAAC58';
+		$scope.getInput = function() {
+			$scope.selection = 'change';
+		};
 }]);

@@ -439,6 +439,12 @@ table td {font-size:14px;}
 .backButton button.btn-primary:focus, .backButton button.btn-primary:active {outline: none;background: #e74e15;}
 .backButton button.btn-primary:active {background: #C24111}
 .singleDealspace {display: none;}
+#changeable .animate-switch-container .animate-switch input {color: #000;}
+div.animate-switch.ng-scope button {transition: all ease .25s;-webkit-transition: all ease .25s;-moz-transition:all ease .25s;-o-transition:all ease .25s;}
+div.animate-switch.ng-scope h1 {display: inline-block;}
+div.animate-switch.ng-scope .change {background: none;border: none;color: #ADADAD;opacity: 0.7;display: inline-block;}
+div.animate-switch.ng-scope .change:active, div.animate-switch.ng-scope .change:focus {outline: none;}
+div.animate-switch.ng-scope .change:hover {opacity:1;}
 .userPage {display: none;}
 .filterData p.ng-binding {overflow: hidden;font-family: "Dosis";}
 .searchInput {color:#000; float: right;margin-right: -5px;border:1px solid transparent;height: 36px;line-height: 18px;padding-left: 10px;transition: all ease .25s;-webkit-transition: all ease .25s;-moz-transition:all ease .25s;-o-transition:all ease .25s;box-shadow: 1px 1px 1px transparent;font-family: "Dosis";font-size: 14px;}

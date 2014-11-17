@@ -25,6 +25,7 @@
     <script src="//code.angularjs.org/1.2.16/angular-cookies.min.js" type="text/javascript"></script>
     <script src="js/model/mainApp.js" type="text/javascript"></script>
     <script src="js/controller/tabsController.js" type="text/javascript"></script>
+    <script src="js/controller/adminController.js" type="text/javascript"></script>
 
     <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
     

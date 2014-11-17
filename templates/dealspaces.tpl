@@ -13,7 +13,7 @@
 			<div class="row">
 				<div class="whirly"></div>
 				<div class="filterBlock col-xs-12 col-sm-6 col-md-4 col-lg-3" ng-repeat="dealspace in result | filter:search">
-					<div class="filter" ng-click="sendAndCatchData('get_dealspace', dealspace.oid)">
+					<div class="filter" ng-click="sendAndCatchData('get_dealspace', dealspace.oid, dealspace.name, dealspace.parts)">
 						<div class="filterTitle lightGrayBorder clearfix" style="border-color: {{dealspace.color}};">
 							<h2 class="lightGrayBg"  style="background:{{dealspace.color}};">{{dealspace.name}}</h2>
 						</div>
@@ -31,37 +31,57 @@
 </section>
 
 <!-- SINGLE DEALSPACE -->
-<div class="singleDealspace">
+<div class="singleDealspace" ng-controller="mainController">
 	<section class="service">
 		<div class="container">
 			<div class="clearfix">
 				<div class="col-xs-12">
-				<div ng-if="single_dealspace.length < 1"><h1>This dealspace is empty</h1></div>
-					<div class="message clearfix" ng-repeat="dealspace in single_dealspace">
-						<div class="row">
-							<div class="messageHeader clearfix">
-								<div class="row">
-									<div class="col-xs-6 messageFrom">
-										<a href="mailto:{{dealspace.FromAddr}}">{{dealspace.FromAddr}}</a>
-									</div>
-									<div class="col-xs-6 messageCreated">
-										{{dealspace.cTime}}
+					<div id="changeable" class="clearfix">
+						<div class="animate-switch-container col-xs-6 col-xs-push-3" ng-switch on="selection">
+							<div class="animate-switch" ng-switch-default>
+								<h1>{{ dealspace_name }}</h1>
+								<button class="change" ng-click="getInput()"><i class="fa fa-cog fa-lg"></i></button>
+							</div>
+							<div ng-if="participants">
+							<div ng-repeat="part in participants">
+								<a href="">{{part.Addr}}</a>
+							</div>
+							</div>
+							<div class="animate-switch" ng-switch-when="change"><input type="text" id="new_name" value="{{dealspace_name}}">
+								<button class="btn btn-primary" ng-click="renameDealspace('rename_dealspace', dealspace_id)">Rename</button>
+							</div>
+						</div>
+						<div class="col-xs-3 pull-right">
+						 	<input type="text" class="searchInput" ng-model="search" placeholder="Search...">
+						</div>
+						<div class="col-xs-12" ng-if="single_dealspace.length < 1"><h1>This dealspace is empty</h1></div>
+						<div class="message clearfix col-xs-12" ng-repeat="dealspace in single_dealspace  | filter:search">
+							<div class="row">
+								<div class="messageHeader clearfix">
+									<div class="row">
+										<div class="col-xs-6 messageFrom">
+											<a href="mailto:{{dealspace.FromAddr}}">{{dealspace.FromAddr}}</a>
+										</div>
+										<div class="col-xs-6 messageCreated">
+											{{dealspace.cTime}}
+										</div>
 									</div>
 								</div>
-							</div>
-							<h1>Subject</h1>
-							<div class="col-xs-12 messageContent">
-								{{dealspace.Content}}
-							</div>
-							<a class="col-xs-12 messageContent threeDots" href="" ng-click="sendAndCatchDataMime('get_mime', dealspace.oid)">...</a>
-							<div ng-if="check_oid == dealspace.oid">
-								<h1>Attachment</h1>
-								<p class="col-xs-12 messageContent">{{attachmentContent}}</p>
+								<h1>{{dealspace.Subject}}</h1>
+								<div class="col-xs-12 messageContent">
+								
+
+									{{dealspace.Content}}
+								</div>
+								<a class="col-xs-12 messageContent threeDots" href="" ng-click="sendAndCatchDataMime('get_mime', dealspace.oid)">...</a>
+								<div ng-if="check_oid == dealspace.oid">
+									<h1>Attachment</h1>
+									<p class="col-xs-12 messageContent">{{attachmentContent}}</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			<div class="backButton" id="back_button" ng-click="backDealspaces()"><button class="btn btn-primary" type="button">Back</button></div>
 		</div>
 	</section>
