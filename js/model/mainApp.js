@@ -201,8 +201,8 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 
 		//change password
 		$scope.changePassword = function(file, oid) {
-			var old_pass = document.getElementById('old_pass');
-			var new_pass = document.getElementById('new_pass');
+			var old_pass = document.getElementById('old_pass').value;
+			var new_pass = document.getElementById('new_pass').value;
 			$scope.post_data = {'oid' : oid, 'old_pass' : old_pass, 'new_pass' : new_pass};
 			$http({
 			method  :'POST',
