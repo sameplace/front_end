@@ -212,7 +212,6 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			transformResponse: function(d, h) { return d;},
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data) {
-				console.log(data);
 			});
 		};
 
@@ -230,6 +229,7 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			headers :{'Content-Type':'application/x-www-form-urlencoded'}
 			}).success(function(data, status, headers, config) {
 				$scope.mime = angular.fromJson(data);
+				$scope.mimeObject = $scope.mime[0];
 				$scope.check_oid = $scope.mime[0].oid;
 				$scope.mime = $scope.mime[1];
 					if(angular.isDefined($scope.mime)){
@@ -245,6 +245,28 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 					} else { 
 						$scope.attachmentContent = '';
 					}
+			});
+		};
+
+		//get attachment
+		$scope.createNewDealspace = function(file, oid) {
+			alert(oid);
+			var name = document.getElementById('new_dealspace_name').value;
+			alert(name);
+			$scope.oid = {'oid' : oid, 'name' : name};
+			$http({
+			method  :'POST',
+			url:'libs/'+file+'.php',
+			dataType:'image/gif',
+			data: $.param($scope.oid),
+			withCredentials: true,
+			transformResponse: function(d, h) { return d;},
+			headers :{'Content-Type':'application/x-www-form-urlencoded'}
+			}).success(function(data, status, headers, config) {
+				// $scope.attachmentContent = data;
+				$scope.imagebase = data;
+				// $("#target").attr("src", data);
+				console.log(data);
 			});
 		};
 

@@ -76,6 +76,9 @@
 									<h1>Attachment</h1>
 									<img id="target" ng-src="data:image/JPG;base64,{{imagebase}}" />
 									<p class="col-xs-12 messageContent">{{attachmentContent}}</p>
+									<h1>Create a new dealspace</h1>
+									<p class="col-xs-6 messageContent">Dealspace name:</p> <input type="text" name="new_dealspace_name" id="new_dealspace_name">
+									<button class="btn btn-primary" ng-click="createNewDealspace('create_dealspace', mimeObject.oid)">Create</button>
 								</div>
 							</div>
 						</div>

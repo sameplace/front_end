@@ -28,10 +28,10 @@
 					<div class="row">
 						<h1>Change Password</h1>
 						<div class="col-xs-6">
-							<label for="old_pass">Old Password:</label> <input type="text" name="old_pass" id="old_pass"> 
+							<label for="old_pass">Old Password:</label> <input type="password" name="old_pass" id="old_pass"> 
 						</div>
 						<div class="col-xs-6">
-							<label for="new_pass">New Password:</label> <input type="text" name="new_pass" id="new_pass">
+							<label for="new_pass">New Password:</label> <input type="password" name="new_pass" id="new_pass">
 						</div>
 						<button class="btn btn-primary" ng-click="changePassword('change_pass', result.oid)">Change</button>
 					</div>
