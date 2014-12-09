@@ -40,7 +40,9 @@
 						<div class="animate-switch-container col-xs-6 col-xs-push-3" ng-switch on="selection">
 							<div class="animate-switch" ng-switch-default>
 								<h1>{{ dealspace_name }}</h1>
-								<button class="change" ng-click="getInput()"><i class="fa fa-cog fa-lg"></i></button>
+								<span ng-if="default_dealspace==false">
+									<button class="change" ng-click="getInput()"><i class="fa fa-cog fa-lg"></i></button>
+								</span>
 							</div>
 							<div class="animate-switch" ng-switch-when="change"><input type="text" id="new_name" value="{{dealspace_name}}">
 								<button class="btn btn-primary" ng-click="renameDealspace('rename_dealspace', dealspace_id)">Rename</button>

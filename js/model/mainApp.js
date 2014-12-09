@@ -157,6 +157,11 @@ angular.module('mainApp', ['ngCookies']).controller('mainController', ['$scope',
 			}).success(function(data, status, headers, config) {
 				$scope.single_dealspace = angular.fromJson(data);
 				$scope.dealspace_name = name;
+				if($scope.dealspace_name=='_____defaultDealSpace_____'){
+					$scope.default_dealspace = true;
+				} else {
+					$scope.default_dealspace = false;
+				}
 				$scope.dealspace_id = oid;
 				angular.element('#service').css('display', 'none');
 				angular.element('.singleDealspace').css('display', 'block');
